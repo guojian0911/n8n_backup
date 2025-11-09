@@ -1,0 +1,190 @@
+{
+  "active": false,
+  "connections": {
+    "OpenRouter Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "大模型工作流场景生成",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "大模型工作流场景生成": {
+      "main": [
+        [
+          {
+            "node": "返回结果",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "提交需求": {
+      "main": [
+        [
+          {
+            "node": "大模型工作流场景生成",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2025-08-09T04:37:12.425Z",
+  "id": "HBIV65YYVRNFGMbx",
+  "isArchived": false,
+  "meta": {
+    "templateCredsSetupCompleted": true
+  },
+  "name": "面向职业的工作流设计助手",
+  "nodes": [
+    {
+      "parameters": {
+        "model": "anthropic/claude-3.7-sonnet:thinking",
+        "options": {
+          "maxRetries": 3
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenRouter",
+      "typeVersion": 1,
+      "position": [
+        96,
+        48
+      ],
+      "id": "f2010b9e-7427-4f15-b27a-7387b2ebba09",
+      "name": "OpenRouter Chat Model",
+      "credentials": {
+        "openRouterApi": {
+          "id": "A0S8k7B8tvsesOwo",
+          "name": "OpenRouter account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "={{ $json['职业'] }}",
+        "options": {
+          "systemMessage": "=# 面向特定职业的{{ $json['平台'] }}自动化工作流设计专家\n\n## 角色定位\n你是一名资深{{ $json['平台'] }}自动化工作流设计专家，精通{{ $json['平台'] }}自动化平台开发，具备丰富的AI应用、API集成、数据流程优化及自动化系统架构设计经验。作为{{ $json['职业'] }}领域的顶尖专家，你对该职业的核心业务流程、典型任务场景、专业术语及常见工作痛点有深入的洞察，能够精准地识别并解决该职业领域特有的自动化需求。\n\n## 任务描述\n根据用户指定的职业领域,设计{{ $json['工作流数量'] }}个高度针对性且可直接落地于{{ $json['平台'] }}平台的自动化工作流方案，每个工作流方案需严格遵循以下专业设计原则：\n\n1. **迭代式开发策略**：从职业领域最核心且高价值的任务入手，采用敏捷迭代方式快速实现。\n2. **职业精准适配**：以对该职业深刻理解为基础，准确识别和解决职业特有的核心痛点。\n3. **标准化任务优先原则**：优先考虑自动化高重复性、规则明确、标准化程度高的任务场景。\n4. **AI技术成熟度优先原则**：集中于文本处理、图像分析等AI应用成熟且易于实现的任务场景。\n5. **零第三方系统依赖原则**：设计的工作流无需额外的第三方数据或系统集成，降低复杂度。\n6. **细粒度任务控制原则**：设计短周期、明确边界的自动化流程，避免过于复杂或过长的任务链路。\n7. **真实业务场景直接映射原则**：确保每个工作流与实际业务场景中明确的具体任务直接对应。\n\n## 输出目标\n为指定的职业领域提供{{ $json['工作流数量'] }}个结构清晰、技术可行、易于实施的自动化工作流方案，每个方案必须包含以下核心内容：\n\n- **{{ $json['平台'] }}自动化工作流概述**：清晰描述工作流的核心价值和典型适用场景（不超过100字）。\n- **工作流功能**：列举工作流具体实现的关键功能和技术特性（3-5点）。\n- **工作流流程**：按{{ $json['平台'] }}平台的模块形式逐步说明完整的自动化流程，包括触发条件、数据处理路径、执行逻辑等关键环节。\n- **工作流数据定义**：介绍给出工作流的输入数据及预期输出数据。\n\n## 输出格式要求\n所有输出内容采用Markdown格式，标题统一以“{{ $json['职业'] }}{{ $json['平台'] }}自动化工作流”为开头，直接输出设计方案。\n\n## 额外要求\n{{ $json['额外要求'] }}\n\n请根据用户提供的职业领域，严格应用上述框架，提供专业、精准、可落地实施的{{ $json['平台'] }}自动化工作流设计方案。\n\n",
+          "returnIntermediateSteps": true
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 1.8,
+      "position": [
+        112,
+        -176
+      ],
+      "id": "b262de49-d500-40e7-88b8-da4322fa67a0",
+      "name": "大模型工作流场景生成"
+    },
+    {
+      "parameters": {
+        "formTitle": "面向职业的工作流设计助手",
+        "formFields": {
+          "values": [
+            {
+              "fieldLabel": "职业",
+              "requiredField": true
+            },
+            {
+              "fieldLabel": "工作流数量",
+              "fieldType": "number",
+              "requiredField": true
+            },
+            {
+              "fieldLabel": "平台",
+              "fieldType": "dropdown",
+              "fieldOptions": {
+                "values": [
+                  {
+                    "option": "Make.com"
+                  },
+                  {
+                    "option": "n8n"
+                  }
+                ]
+              },
+              "requiredField": true
+            },
+            {
+              "fieldLabel": "额外要求",
+              "fieldType": "textarea"
+            }
+          ]
+        },
+        "options": {
+          "path": "workflow-design"
+        }
+      },
+      "type": "n8n-nodes-base.formTrigger",
+      "typeVersion": 2.2,
+      "position": [
+        -96,
+        -176
+      ],
+      "id": "485347c8-b3da-4cc0-8928-c94673db1cc4",
+      "name": "提交需求",
+      "webhookId": "40f1c125-e127-45c3-b6b9-f215fdb17716"
+    },
+    {
+      "parameters": {
+        "operation": "completion",
+        "respondWith": "showText",
+        "responseText": "=<pre>\n\n{{ $json.output }}\n\n</pre>"
+      },
+      "type": "n8n-nodes-base.form",
+      "typeVersion": 1,
+      "position": [
+        512,
+        -176
+      ],
+      "id": "fb4afffa-7e81-45ec-bbae-444ed81fef17",
+      "name": "返回结果",
+      "webhookId": "fcde09ef-72f1-4034-ac99-c6c3c0ec6834"
+    },
+    {
+      "parameters": {
+        "promptName": "网页设计师",
+        "requestOptions": {}
+      },
+      "type": "@langfuse/n8n-nodes-langfuse.langfuse",
+      "typeVersion": 1,
+      "position": [
+        624,
+        48
+      ],
+      "id": "cf32f175-7425-4ee6-91cf-3f99606e26d0",
+      "name": "Get a prompt",
+      "credentials": {
+        "langfuseApi": {
+          "id": "xC5jFxoP0Dh5TPqz",
+          "name": "Langfuse account"
+        }
+      }
+    }
+  ],
+  "pinData": {},
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "shared": [
+    {
+      "updatedAt": "2025-08-09T04:37:12.427Z",
+      "createdAt": "2025-08-09T04:37:12.427Z",
+      "role": "workflow:owner",
+      "workflowId": "HBIV65YYVRNFGMbx",
+      "projectId": "ougNWjAhJ4ikJ0c3"
+    }
+  ],
+  "staticData": null,
+  "tags": [],
+  "triggerCount": 0,
+  "updatedAt": "2025-08-28T08:09:19.000Z",
+  "versionId": "4c44e6ca-7637-4066-871f-d5f5fa7e4deb"
+}
