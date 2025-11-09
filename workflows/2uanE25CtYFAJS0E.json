@@ -1,0 +1,130 @@
+{
+  "active": false,
+  "connections": {
+    "Read From File": {
+      "main": [
+        [
+          {
+            "node": "Convert To Spreadsheet",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "On clicking 'execute'": {
+      "main": [
+        [
+          {
+            "node": "Read From File",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Convert To Spreadsheet": {
+      "main": [
+        [
+          {
+            "node": "Insert into MySQL",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2025-09-05T07:54:22.296Z",
+  "id": "2uanE25CtYFAJS0E",
+  "isArchived": false,
+  "meta": {
+    "templateCredsSetupCompleted": true
+  },
+  "name": "导入excel到数据库",
+  "nodes": [
+    {
+      "parameters": {},
+      "id": "752c8cee-e14a-4d11-8b74-90510d33e9fa",
+      "name": "On clicking 'execute'",
+      "type": "n8n-nodes-base.manualTrigger",
+      "position": [
+        -176,
+        0
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "filePath": "/home/node/.n8n/concerts-2023.csv"
+      },
+      "id": "db77ad99-8f6e-437e-a10e-07e26ad98963",
+      "name": "Read From File",
+      "type": "n8n-nodes-base.readBinaryFile",
+      "position": [
+        32,
+        0
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "options": {
+          "rawData": true,
+          "readAsString": true
+        }
+      },
+      "id": "5406810c-909a-497f-a0e0-26a53b49a3e3",
+      "name": "Convert To Spreadsheet",
+      "type": "n8n-nodes-base.spreadsheetFile",
+      "position": [
+        224,
+        0
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "table": {
+          "__rl": true,
+          "mode": "name",
+          "value": "concerts_2023_csv"
+        },
+        "columns": "Date, Band, ConcertName, Country, City, Location, LocationAddress",
+        "options": {}
+      },
+      "id": "970e6abf-f0ad-4d53-b3af-cc9f0d575508",
+      "name": "Insert into MySQL",
+      "type": "n8n-nodes-base.mySql",
+      "position": [
+        432,
+        0
+      ],
+      "typeVersion": 1,
+      "credentials": {
+        "mySql": {
+          "id": "CznscLOtlhzkEKIf",
+          "name": "MySQL account"
+        }
+      }
+    }
+  ],
+  "pinData": {},
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "shared": [
+    {
+      "updatedAt": "2025-09-05T07:54:22.299Z",
+      "createdAt": "2025-09-05T07:54:22.299Z",
+      "role": "workflow:owner",
+      "workflowId": "2uanE25CtYFAJS0E",
+      "projectId": "daqvnEo6t4UA2J5k"
+    }
+  ],
+  "staticData": null,
+  "tags": [],
+  "triggerCount": 0,
+  "updatedAt": "2025-09-05T08:53:38.000Z",
+  "versionId": "2a108b0a-06d4-42f0-9103-b4181ee83d84"
+}
