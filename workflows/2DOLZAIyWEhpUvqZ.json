@@ -1,0 +1,142 @@
+{
+  "active": false,
+  "connections": {
+    "Webhook 触发器": {
+      "main": [
+        [
+          {
+            "node": "下载图片",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "下载图片": {
+      "main": [
+        [
+          {
+            "node": "OCR 识别",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OCR 识别": {
+      "main": [
+        [
+          {
+            "node": "返回结果",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2025-09-05T08:15:44.389Z",
+  "id": "2DOLZAIyWEhpUvqZ",
+  "isArchived": false,
+  "meta": {
+    "templateCredsSetupCompleted": true
+  },
+  "name": "OCRV2",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "ocr-image",
+        "responseMode": "responseNode",
+        "options": {}
+      },
+      "id": "a8091b12-434f-4a02-a1c1-9f7578462797",
+      "name": "Webhook 触发器",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [
+        -160,
+        80
+      ],
+      "webhookId": "a11fd56b-4d14-4795-a512-b52d472ee144"
+    },
+    {
+      "parameters": {
+        "url": "={{ $json.body.imageUrl }}",
+        "options": {
+          "response": {
+            "response": {
+              "responseFormat": "file"
+            }
+          }
+        }
+      },
+      "id": "48b722b6-263e-485b-8945-f651c51ff58d",
+      "name": "下载图片",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4,
+      "position": [
+        64,
+        80
+      ]
+    },
+    {
+      "parameters": {
+        "resource": "image",
+        "operation": "analyze",
+        "text": "请提取这张图片中的所有文字内容，保持原有的格式和布局。只返回提取的文字，不要添加任何额外的说明。",
+        "imageUrls": "https://sns-webpic-qc.xhscdn.com/202509051616/a51d…p7hqctg2305pdfq463geti1v99uo8!nd_dft_wlteh_webp_3",
+        "options": {
+          "detail": "high"
+        }
+      },
+      "id": "1b8560e4-2721-4c31-80a9-4f9f5a017cf3",
+      "name": "OCR 识别",
+      "type": "@n8n/n8n-nodes-langchain.openAi",
+      "typeVersion": 1,
+      "position": [
+        288,
+        80
+      ],
+      "credentials": {
+        "openAiApi": {
+          "id": "ndlAC5gZEk3caKw8",
+          "name": "Aihubmix"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "respondWith": "json",
+        "responseBody": "={{ {\n  \"success\": true,\n  \"message\": \"OCR识别完成\",\n  \"data\": {\n    \"extractedText\": $json.content || $json.text || $json.choices?.[0]?.message?.content || \"无法提取文字\",\n    \"imageUrl\": $('Webhook 触发器').item.json.body.imageUrl,\n    \"timestamp\": new Date().toISOString()\n  }\n} }}",
+        "options": {}
+      },
+      "id": "e74027e4-3ca6-43b8-b089-302f648ef535",
+      "name": "返回结果",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1,
+      "position": [
+        512,
+        80
+      ]
+    }
+  ],
+  "pinData": {},
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "shared": [
+    {
+      "updatedAt": "2025-09-05T08:15:44.401Z",
+      "createdAt": "2025-09-05T08:15:44.401Z",
+      "role": "workflow:owner",
+      "workflowId": "2DOLZAIyWEhpUvqZ",
+      "projectId": "daqvnEo6t4UA2J5k"
+    }
+  ],
+  "staticData": null,
+  "tags": [],
+  "triggerCount": 0,
+  "updatedAt": "2025-09-05T08:53:35.000Z",
+  "versionId": "573b652f-ddb6-4df7-824a-a9c58f1835c7"
+}
