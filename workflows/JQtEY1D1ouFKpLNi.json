@@ -1,0 +1,2044 @@
+{
+  "active": false,
+  "connections": {
+    "需求输入-视频": {
+      "main": [
+        [
+          {
+            "node": "路由-自动化",
+            "type": "main",
+            "index": 2
+          },
+          {
+            "node": "路由-表单",
+            "type": "main",
+            "index": 2
+          }
+        ]
+      ]
+    },
+    "设置参数-综合": {
+      "main": [
+        [
+          {
+            "node": "检查视频类型",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "检查视频类型": {
+      "main": [
+        [
+          {
+            "node": "视频预处理",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "上传视频": {
+      "main": [
+        [
+          {
+            "node": "等待-文件处理",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "设置参数-提示词": {
+      "main": [
+        [
+          {
+            "node": "分析爆款视频",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "分析爆款视频": {
+      "main": [
+        [
+          {
+            "node": "设置参数-提取提示词",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "设置参数-提取提示词": {
+      "main": [
+        [
+          {
+            "node": "遍历",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "等待-文件处理": {
+      "main": [
+        [
+          {
+            "node": "设置参数-提示词",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "遍历": {
+      "main": [
+        [
+          {
+            "node": "循环",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "循环": {
+      "main": [
+        [
+          {
+            "node": "聚合",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Liblib拼接-生图",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "视频生成-Fal-Kling": {
+      "main": [
+        [
+          {
+            "node": "等待-Fal",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "获取视频-Fal-Kling": {
+      "main": [
+        [
+          {
+            "node": "判断-Fal-Fluxlora1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "等待-Fal": {
+      "main": [
+        [
+          {
+            "node": "获取视频-Fal-Kling",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "判断-Fal-Fluxlora1": {
+      "main": [
+        [
+          {
+            "node": "设置参数-视频网址",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "等待-Fal",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "设置参数-视频网址": {
+      "main": [
+        [
+          {
+            "node": "循环",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Gemini Chat Model1": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "视频提示词-图片动态视频",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "视频提示词-图片动态视频": {
+      "main": [
+        [
+          {
+            "node": "设置参数-视频提示词",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "下载图片": {
+      "main": [
+        [
+          {
+            "node": "视频提示词-图片动态视频",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "设置参数-视频提示词": {
+      "main": [
+        [
+          {
+            "node": "视频生成-Fal-Kling",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "下载视频": {
+      "main": [
+        [
+          {
+            "node": "上传文件",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "聚合": {
+      "main": [
+        [
+          {
+            "node": "视频网址拼接",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "声音合成-裁剪": {
+      "main": [
+        [
+          {
+            "node": "水印合成",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "上传文件": {
+      "main": [
+        [
+          {
+            "node": "设置参数-最终视频网址",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "视频网址拼接": {
+      "main": [
+        [
+          {
+            "node": "视频拼接",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "视频拼接": {
+      "main": [
+        [
+          {
+            "node": "声音合成-裁剪",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "下载分析视频": {
+      "main": [
+        [
+          {
+            "node": "路由-自动化",
+            "type": "main",
+            "index": 1
+          },
+          {
+            "node": "路由-表单",
+            "type": "main",
+            "index": 1
+          }
+        ]
+      ]
+    },
+    "视频主题生成": {
+      "main": [
+        [
+          {
+            "node": "设置参数-视频主题",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "自动化": {
+      "main": [
+        [
+          {
+            "node": "主题",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Structured Output Parser": {
+      "ai_outputParser": [
+        [
+          {
+            "node": "视频主题生成",
+            "type": "ai_outputParser",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "设置参数-视频主题": {
+      "main": [
+        [
+          {
+            "node": "路由-自动化",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "设置参数-最终视频网址": {
+      "main": [
+        [
+          {
+            "node": "分支判断",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "路由-表单": {
+      "main": [
+        [
+          {
+            "node": "上传视频",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "视频预处理": {
+      "main": [
+        [
+          {
+            "node": "路由-表单",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "路由-自动化": {
+      "main": [
+        [
+          {
+            "node": "设置参数-综合",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Liblib 生图": {
+      "main": [
+        [
+          {
+            "node": "等待",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "等待": {
+      "main": [
+        [
+          {
+            "node": "Liblib拼接-结果",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Liblib拼接-生图": {
+      "main": [
+        [
+          {
+            "node": "签名-生图",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Liblib拼接-结果": {
+      "main": [
+        [
+          {
+            "node": "签名-结果",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "签名-结果": {
+      "main": [
+        [
+          {
+            "node": "URL 安全-结果",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "签名-生图": {
+      "main": [
+        [
+          {
+            "node": "URL 安全-生图",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "URL 安全-生图": {
+      "main": [
+        [
+          {
+            "node": "Liblib 生图",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "URL 安全-结果": {
+      "main": [
+        [
+          {
+            "node": "Liblib 结果",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Liblib 结果": {
+      "main": [
+        [
+          {
+            "node": "判断-Liblib敏感",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "判断-Liblib": {
+      "main": [
+        [
+          {
+            "node": "下载图片",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "等待",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "判断-Liblib敏感": {
+      "main": [
+        [
+          {
+            "node": "循环",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "判断-Liblib",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "主题": {
+      "main": [
+        [
+          {
+            "node": "视频主题生成",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "下载分析视频",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Gemini Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "视频主题生成",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "水印合成": {
+      "main": [
+        [
+          {
+            "node": "下载视频",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "跳转视频": {
+      "main": [
+        [
+          {
+            "node": "保存视频",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "分支判断": {
+      "main": [
+        [
+          {
+            "node": "跳转视频",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "保存视频",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2025-10-23T14:20:05.059Z",
+  "id": "JQtEY1D1ouFKpLNi",
+  "isArchived": false,
+  "meta": null,
+  "name": "33-普通版",
+  "nodes": [
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "fb38bd2d-146f-4040-996d-484f7b1e1ef6",
+              "name": "视频主题",
+              "value": "={{ $json['视频主题'] }}",
+              "type": "string"
+            },
+            {
+              "id": "0aa17899-3b88-404d-a680-57d8c1c4b4f4",
+              "name": "场景数量",
+              "value": "={{ $json['场景数量'] }}",
+              "type": "string"
+            },
+            {
+              "id": "d4d66345-a2c0-40af-b2dc-03b0fc99a722",
+              "name": "提示词示例",
+              "value": "={{ $json['提示词示例'] }}",
+              "type": "string"
+            },
+            {
+              "id": "67e8cf6d-cd55-4731-8012-8ab5f3f490c1",
+              "name": "配乐网址",
+              "value": "https://pub-b65afb21c951453a872a026d19411abe.r2.dev/shizishengyin.MP3",
+              "type": "string"
+            },
+            {
+              "id": "b34aabd3-afea-4b1f-9118-e8e26810c6d8",
+              "name": "主模型编号",
+              "value": "412b427ddb674b4dbab9e5abd5ae6057",
+              "type": "string"
+            },
+            {
+              "id": "77f73235-58da-411d-bc58-5e56b73b371b",
+              "name": "Lora 编号",
+              "value": "=afbf6e6f1cbe4bdf849032d9159dc6d4",
+              "type": "string"
+            },
+            {
+              "id": "c04dc62e-c80d-4eec-9914-37fbf8c48fe2",
+              "name": "触发词",
+              "value": "=Film Photography",
+              "type": "string"
+            },
+            {
+              "id": "b6dffcd7-61d0-4053-a84d-712cf540d23a",
+              "name": "图片特殊要求",
+              "value": "=真实，纪实风格",
+              "type": "string"
+            },
+            {
+              "id": "7dee6cac-b186-4a91-ac2f-5d9fb7293334",
+              "name": "视频特殊要求",
+              "value": "=动物世界纪录片的镜头语言",
+              "type": "string"
+            },
+            {
+              "id": "5900ecc9-f048-42b2-8da1-4b9594babe34",
+              "name": "单个视频时长",
+              "value": "5",
+              "type": "string"
+            },
+            {
+              "id": "133e8060-5f67-4f4a-8ea4-21a2ed45abff",
+              "name": "分支",
+              "value": "={{ $json['分支'] }}",
+              "type": "string"
+            },
+            {
+              "id": "31f6f3a5-ae21-4910-b1ad-633d920131a4",
+              "name": "Timestamp",
+              "value": "={{ Date.now().toString() }}",
+              "type": "string"
+            },
+            {
+              "id": "0340a9a1-92ea-4d1d-87a0-5df84e9e051d",
+              "name": "SignatureNonce",
+              "value": "={{ Math.random().toString(36).slice(2) }}",
+              "type": "string"
+            },
+            {
+              "id": "7c292ab3-44fb-4259-ba50-2be64646b7fd",
+              "name": "Liblib 生图",
+              "value": "/api/generate/webui/text2img",
+              "type": "string"
+            },
+            {
+              "id": "ec4a96f3-afc6-4c6b-9da3-fc088b1c42ea",
+              "name": "Liblib AccessKey",
+              "value": "Vd4-AAoH2M6kSFwbw",
+              "type": "string"
+            },
+            {
+              "id": "0e214d75-0026-4755-9728-2d59218c8361",
+              "name": "Liblib SecretKey",
+              "value": "De7rJ_MyyDQugEatAjIm0JyJ",
+              "type": "string"
+            },
+            {
+              "id": "e38e4e09-5797-45b0-9064-1f85b9c7d7c1",
+              "name": "Liblib 结果",
+              "value": "/api/generate/webui/status",
+              "type": "string"
+            },
+            {
+              "id": "ea40dac7-caa8-4dea-b4b4-87c2ef226eb9",
+              "name": "Liblib 网址",
+              "value": "https://openapi.liblibai.cloud",
+              "type": "string"
+            },
+            {
+              "id": "619bf476-d1ab-4840-8cf5-263022a26eec",
+              "name": "Google Cloud Storage Bucket name",
+              "value": "n8n-bucket",
+              "type": "string"
+            },
+            {
+              "id": "0758eaa3-0caa-4bd8-bce9-2ab705896ae3",
+              "name": "gemini",
+              "value": "AIzaSyCvN0SrWsUU-mUSljv-NxEN2I",
+              "type": "string"
+            },
+            {
+              "id": "d40489d3-5687-4f2b-bf73-2d88182f39d0",
+              "name": "NCA api key",
+              "value": "123",
+              "type": "string"
+            },
+            {
+              "id": "ec1778a6-19cb-44ec-8111-18a9d55e86ec",
+              "name": "NCA url",
+              "value": "=https://no-code-architects-toolkit-00881.us-central1.run.app",
+              "type": "string"
+            },
+            {
+              "id": "e2f7b7b8-3ebb-4219-9ddb-6dee1dc6b6a9",
+              "name": "fal ai api key",
+              "value": "b4a6ef9e-fdc1-46bc-b62b-e9e:9c552862d267b671687508f182e24d16",
+              "type": "string"
+            },
+            {
+              "id": "def02153-ae31-46af-9238-b46d3e1d3a4b",
+              "name": "Logo 网址",
+              "value": "https://pub-b65afb21c951453a872a026d19411abe.r2.dev/xiangyu-logo.png",
+              "type": "string"
+            }
+          ]
+        },
+        "includeOtherFields": true,
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        -4528,
+        144
+      ],
+      "id": "e65028ad-5baf-4e80-b684-498f21ee9966",
+      "name": "设置参数-综合"
+    },
+    {
+      "parameters": {
+        "formTitle": "翔宇工作流爆款视频生成器",
+        "formFields": {
+          "values": [
+            {
+              "fieldLabel": "视频主题",
+              "fieldType": "textarea"
+            },
+            {
+              "fieldLabel": "提示词示例",
+              "fieldType": "textarea"
+            },
+            {
+              "fieldLabel": "场景数量"
+            },
+            {
+              "fieldLabel": "分支",
+              "fieldType": "dropdown",
+              "fieldOptions": {
+                "values": [
+                  {
+                    "option": "自动化"
+                  },
+                  {
+                    "option": "表单"
+                  }
+                ]
+              }
+            },
+            {
+              "fieldLabel": "mp4",
+              "fieldType": "file",
+              "multipleFiles": false
+            }
+          ]
+        },
+        "options": {
+          "appendAttribution": false,
+          "buttonLabel": "创作视频",
+          "path": "xiangyu-video"
+        }
+      },
+      "type": "n8n-nodes-base.formTrigger",
+      "typeVersion": 2.2,
+      "position": [
+        -4976,
+        544
+      ],
+      "id": "70ac60ed-499e-4e3e-80f3-173d8bb2ffa4",
+      "name": "需求输入-视频",
+      "webhookId": "8d339343-017c-4d95-b598-cf960cd8351e"
+    },
+    {
+      "parameters": {
+        "jsCode": "/**\n * n8n Function | Binary-only File-Meta Extractor\n * 适用：MP3 / MP4 / PDF / PNG / JPG（可自行扩展）\n */\n\nconst item = $input.first();\n\n/* ----------------------------------------------------------\n * 0) 定位二进制块 & 校验\n * -------------------------------------------------------- */\nif (!item.binary || Object.keys(item.binary).length === 0) {\n\tthrow new Error('未检测到二进制数据，请确认上一步已正确下载文件');\n}\n\nconst binKey = Object.keys(item.binary).find(k => item.binary[k]?.data);\nif (!binKey) throw new Error('binary 对象中未找到有效的 .data 字段');\n\nconst bin        = item.binary[binKey];\nconst base64Data = bin.data;\n\n/* ----------------------------------------------------------\n * 1) 基础信息\n * -------------------------------------------------------- */\nconst fileName = bin.fileName || 'unknown';\nconst fileExtension =\n\t(bin.fileExtension || (fileName.includes('.') ? fileName.split('.').pop() : '')).toLowerCase();\n\nlet mimeType = bin.mimeType || '';\nif (!mimeType) {\n\tconst extMimeMap = {\n\t\tmp3 : 'audio/mpeg',\n\t\tmp4 : 'video/mp4',\n\t\tpdf : 'application/pdf',\n\t\tpng : 'image/png',\n\t\tjpg : 'image/jpeg',\n\t\tjpeg: 'image/jpeg',\n\t};\n\tmimeType = extMimeMap[fileExtension] || 'application/octet-stream';\n}\n\n/* ----------------------------------------------------------\n * 2) 文件大小\n * -------------------------------------------------------- */\nconst fileSizeBytes = bin.fileSize || Buffer.from(base64Data, 'base64').length;\n\n// 若后续节点有需要，可内部使用该函数得到友好尺寸\nconst formatBytes = (bytes, dp = 2) => {\n\tconst units = ['B', 'kB', 'MB', 'GB', 'TB'];\n\tlet i = 0;\n\twhile (bytes >= 1024 && i < units.length - 1) { bytes /= 1024; i++; }\n\treturn `${i === 0 ? bytes : bytes.toFixed(dp)} ${units[i]}`;\n};\nconst fileSizeFormatted = formatBytes(fileSizeBytes); // 仅内部使用，不输出\n\n/* ----------------------------------------------------------\n * 3) 类型校验\n * -------------------------------------------------------- */\nconst typeCheck = {\n\tisAudio: mimeType.startsWith('audio/'),\n\tisVideo: mimeType.startsWith('video/'),\n\tisPdf  : mimeType === 'application/pdf',\n};\nconst isImage = mimeType.startsWith('image/'); // 新增：图片类型\n\nif (!typeCheck.isAudio && !typeCheck.isVideo && !typeCheck.isPdf && !isImage) {\n\tthrow new Error(`不支持的文件类型：${mimeType}（仅示例 MP3/MP4/PDF/PNG/JPG）`);\n}\n\n/* ----------------------------------------------------------\n * 4) 返回结果（已去掉 fileSizeFormatted）\n * -------------------------------------------------------- */\nreturn {\n\tjson: {\n\t\tfileName,\n\t\tfileExtension,\n\t\tmimeType,\n\t\tfileSize: fileSizeBytes,\n\t\t...typeCheck,          // 输出字段保持不变，**不包含 isImage**\n\t\tuploadReady: true,\n\t\ttimestamp: new Date().toISOString(),\n\t},\n\tbinary: {\n\t\t...item.binary,\n\t\tfileName,\n\t\tmimeType,\n\t\tfileSize: fileSizeBytes,\n\t},\n};"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -4304,
+        144
+      ],
+      "id": "c6170255-bcb5-48ec-a092-806c4217a2b5",
+      "name": "检查视频类型"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://generativelanguage.googleapis.com/upload/v1beta/files",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            {
+              "name": "key",
+              "value": "={{ $('设置参数-综合').first().json.gemini }}"
+            }
+          ]
+        },
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Content-Length",
+              "value": "={{ $json.mp4.size }}"
+            },
+            {
+              "name": "X-Goog-Upload-Offset",
+              "value": "0"
+            },
+            {
+              "name": "X-Goog-Upload-Command",
+              "value": "upload, finalize"
+            }
+          ]
+        },
+        "sendBody": true,
+        "contentType": "binaryData",
+        "inputDataFieldName": "mp4",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        -3648,
+        320
+      ],
+      "id": "e47b64a1-96f9-4b2b-81ac-08eea66864f2",
+      "name": "上传视频"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-05-20:generateContent",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            {
+              "name": "key",
+              "value": "={{ $('设置参数-综合').first().json.gemini }}"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"contents\": [\n    {\n      \"parts\": [\n        {\n          \"text\": {{ JSON.stringify($('设置参数-提示词').item.json.prompt) }}\n        },\n        {\n          \"file_data\": {\n            \"mime_type\": \"{{ $json.file.mimeType }}\",\n            \"file_uri\": \"{{ $json.file.uri }}\"\n          }\n        }\n      ]\n    }\n  ],\n\n  \"generationConfig\": {\n    \"responseMimeType\": \"application/json\",\n    \"responseSchema\": {\n      \"type\": \"OBJECT\",\n      \"properties\": {\n        \"storyboards\": {\n          \"type\": \"ARRAY\",\n          \"items\": {\n            \"type\": \"OBJECT\",\n            \"properties\": {\n              \"scene_id\":        { \"type\": \"INTEGER\" },\n              \"chinese_prompt\":  { \"type\": \"STRING\"  },\n              \"english_prompt\":  { \"type\": \"STRING\"  }\n            },\n            \"required\": [\n              \"scene_id\",\n              \"chinese_prompt\",\n              \"english_prompt\"\n            ],\n            \"propertyOrdering\": [\n              \"scene_id\",\n              \"chinese_prompt\",\n              \"english_prompt\"\n            ]\n          }\n        }\n      },\n      \"required\": [\n        \"storyboards\"\n      ],\n      \"propertyOrdering\": [\n        \"storyboards\"\n      ]\n    }\n  }\n}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        -2992,
+        304
+      ],
+      "id": "b306c71f-caff-4832-99c8-46e05d449ee5",
+      "name": "分析爆款视频"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "b875e50b-ac3f-4dff-bcde-8d67b9048360",
+              "name": "prompt",
+              "value": "=# 角色：爆款短视频复刻与创意大师\n\n你是一位专注于TikTok、Shorts等短视频平台的爆款内容复刻与创新专家。\n你的任务是：精准分析用户提供的【参考爆款视频】，提炼其成功的【病毒传播关键技巧、核心方法及视觉爆点】，并巧妙结合用户提供的【参考图片提示词】中的风格与特色元素，以用户指定的【新视频主题】为核心，设计一系列具备爆款潜质的图片提示词。这些提示词应明确体现对参考视频成功元素的精准复刻及对图片风格的创意应用，确保每个分镜具备强烈的病毒传播潜力。\n\n## 输入信息：\n1. **参考爆款视频：**\n   用户提供，用于深入分析其视觉风格、叙事节奏、镜头语言和爆点。\n\n2. **参考图片提示词：**\n   用户提供的AI绘图示例提示词，提取风格、构图、关键词等元素。\n   {{ $('设置参数-综合').first().json['提示词示例'] }}\n\n3. **新视频主题：**\n   {{ $('设置参数-综合').first().json['视频主题'] }}\n\n4. **分镜数量：**\n   {{ $('设置参数-综合').first().json['场景数量'] }}\n\n5. **触发词：**\n   {{ $('设置参数-综合').first().json['触发词'] }}\n   （若触发词存在，每个场景提示词句首放置；若为空则无需放置）\n6. **额外要求：**\n   {{ $('设置参数-综合').first().json['图片特殊要求'] }}\n   （若额外要求存在，则需要遵循额外要求的规则；若为空则无需遵守）\n\n## 核心目标：\n每一条生成的图片提示词需精准体现新主题，并且巧妙融入参考视频中分析得出的“病毒传播基因”，同时创新性地借鉴参考图片提示词中的优秀元素，以达到甚至超越原作的传播效果。\n\n## 输出要求：\n1.请严格按以下格式将结果封装在可被程序解析的JSON中。\n* JSON 对象包含一个名为 storyboards 的数组，外层无需使用 ```json 代码块包裹。\n* 每个分镜元素包含：* 分镜ID (`scene_id`)、中文图片提示词 (`chinese_prompt`)、英文图片提示词 (`english_prompt`)。\n每个提示词需精心设计，明确体现爆款特质，无需创作说明，融合图片参考的优秀元素，激发观看者兴趣。\n2. 每条提示词需精心雕琢，准确捕捉爆款视频的核心要素，确保具备强烈的视觉冲击力和病毒式传播潜力。\n3. 提示词应简洁直接，无需包含任何创作指导或说明性文字。\n4. 请控制每条提示词的字数在 250-350 字范围内，确保完全符合 Flux 图像生成模型的输入要求和最佳实践。",
+              "type": "string"
+            }
+          ]
+        },
+        "includeOtherFields": true,
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        -3216,
+        320
+      ],
+      "id": "2fb61fb0-0fc9-4e18-bc24-d2b86d29e0dc",
+      "name": "设置参数-提示词"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "b40e171c-a892-4f47-8429-ccd9b0f8f2f1",
+              "name": "图片提示词",
+              "value": "={{ $json.candidates[0].content.parts[0].text }}",
+              "type": "object"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        -2768,
+        320
+      ],
+      "id": "835bb912-158a-4198-a845-60f2490fd206",
+      "name": "设置参数-提取提示词"
+    },
+    {
+      "parameters": {
+        "amount": 1,
+        "unit": "minutes"
+      },
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "position": [
+        -3424,
+        320
+      ],
+      "id": "faed81c8-2fb5-43c8-aa8f-94352113df67",
+      "name": "等待-文件处理",
+      "webhookId": "8d7661e1-8daa-4e7d-8db5-bb3aca02ed1d"
+    },
+    {
+      "parameters": {
+        "fieldToSplitOut": "['图片提示词'].storyboards",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.splitOut",
+      "typeVersion": 1,
+      "position": [
+        -2544,
+        320
+      ],
+      "id": "edd6fa62-61bf-4b88-9ece-87dab48e6db4",
+      "name": "遍历"
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "n8n-nodes-base.splitInBatches",
+      "typeVersion": 3,
+      "position": [
+        -2336,
+        320
+      ],
+      "id": "061c2cd4-86cf-4507-83b3-0185e78d2ec2",
+      "name": "循环"
+    },
+    {
+      "parameters": {
+        "aggregate": "aggregateAllItemData",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.aggregate",
+      "typeVersion": 1,
+      "position": [
+        -2112,
+        -144
+      ],
+      "id": "29fce9d4-ea75-4d83-b22e-a57a1eb24a41",
+      "name": "聚合"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://queue.fal.run/fal-ai/kling-video/v2.1/standard/image-to-video",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "=Key {{ $('设置参数-综合').first().json['fal ai api key'] }}"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n     \"prompt\": {{ JSON.stringify($('设置参数-视频提示词').item.json['视频提示词']) }},\n     \"image_url\": \"{{ $('下载图片').item.json.data.images[0].imageUrl }}\",\n     \"duration\": \"{{ $('设置参数-综合').item.json['单个视频时长'] }}\",\n     \"aspect_ratio\": \"16:9\",\n     \"negative_prompt\": \"blur, distort, and low quality\",\n     \"cfg_scale\": 0.5\n}",
+        "options": {
+          "response": {}
+        }
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        1136,
+        176
+      ],
+      "id": "020efe67-839b-40d6-9d2a-e2d0fdd2d5aa",
+      "name": "视频生成-Fal-Kling"
+    },
+    {
+      "parameters": {
+        "url": "={{ $('视频生成-Fal-Kling').item.json.response_url }}",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "=Key {{ $('设置参数-综合').first().json['fal ai api key'] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        1600,
+        96
+      ],
+      "id": "83232ddb-6aaa-489e-862f-2dff7fdd1743",
+      "name": "获取视频-Fal-Kling",
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "amount": 1,
+        "unit": "minutes"
+      },
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "position": [
+        1360,
+        176
+      ],
+      "id": "5acb9a7c-9b0b-4943-b448-9f0419425665",
+      "name": "等待-Fal",
+      "webhookId": "cb50c144-3f29-4370-8a22-dd6a2c17fae5"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "43ed5f2c-d40d-4a8e-9d8a-2ae2a95ffaa3",
+              "leftValue": "={{$json.video.url}}",
+              "rightValue": "",
+              "operator": {
+                "type": "string",
+                "operation": "exists",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        1792,
+        176
+      ],
+      "id": "b590ba86-f68e-4cd7-b09a-565f0f08cf89",
+      "name": "判断-Fal-Fluxlora1"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "f13ed052-d4e4-4af8-a651-3d76fb737026",
+              "name": "video",
+              "value": "={{ $json.video.url }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        2016,
+        416
+      ],
+      "id": "c177ab4c-2e78-45fd-93e6-fcc9be0c5d7c",
+      "name": "设置参数-视频网址"
+    },
+    {
+      "parameters": {
+        "modelName": "models/gemini-2.5-flash-preview-05-20",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+      "typeVersion": 1,
+      "position": [
+        640,
+        400
+      ],
+      "id": "f8a91118-ecb7-4057-8d1f-7b0d1f3d8481",
+      "name": "Google Gemini Chat Model1",
+      "credentials": {
+        "googlePalmApi": {
+          "id": "3N5wdjCgo3NS6T9S",
+          "name": "Google Gemini(PaLM) Api account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=画面图片已发送\n生成的图片的提示词如下，可供参考：\n{{ $('循环').item.json.english_prompt }}\n额外要求：\n{{ $('设置参数-综合').first().json['视频特殊要求'] }}\n",
+        "options": {
+          "systemMessage": "=# AI 视频生成提示词指南（基于图片输入）\n\n## 🎬 角色定义\n\n你是一名顶级视觉叙事导演与AI视频提示词专家。你的任务是深入解读用户提供的静态图片，以精准构思并创作高度优化的英文视频提示词。这些提示词专为最新的AI图片生成视频模型设计（如 OpenAI Sora、Runway、Pika Labs、Luma AI、Kling、Google Veo 等），用于指导生成5-10秒动态流畅的视频。\n\n## 🎯 核心目标\n\n输出精炼且高质量的英文视频提示词，以精准控制动态效果，确保视频流畅自然，与输入图片的视觉风格完美融合，避免任何不自然的扭曲或突兀感。\n\n## 📥 输入信息\n\n* 输入图片（Input Image）\n* 生成图片的提示词\n  * 确定视频主体、构图、色彩、光影和整体艺术风格。\n* 额外要求：\n  * 若额外要求存在，则需要遵循额外要求的规则；若为空则无需遵守\n\n## 🛠️ 提示词构建原则\n\n构建提示词时，逐步引入以下元素。每次修改建议仅调整一种元素，以准确评估其影响。\n\n推荐顺序：主体运动 → 场景运动 → 镜头运动 → 风格描述。\n\n### a. 主体运动 (Subject Motion)\n\n* 清晰描述图片中主体的动作、姿态或表情变化。\n* 明确指称主体：如 “the subject”, “the figure in the foreground”, “it”, “he/she”。\n* 示例：\n  * “The subject slowly turns around.”\n  * “The figure in the foreground raises a hand.”\n  * “The cat blinks its eyes.”\n\n### b. 多主体运动 (Multiple Subjects)\n\n* 使用空间位置或显著特征进行区分。\n* 示例：\n  * “The subject on the left walks forward, while the subject on the right remains still.”\n  * “The woman in the red dress nods; the man beside her waves.”\n\n### c. 场景运动 (Scene Motion)\n\n* 描述环境对主体动作的反应或自主变化。\n* 策略：\n  * 隐性驱动（推荐）：暗示环境变化。\n    * “The subject runs through a dusty desert.”\n  * 显性指令：明确描述环境变化。\n    * “The subject runs through the desert, dust kicking up behind them.”\n\n### d. 镜头运动 (Camera Motion)\n\n* 明确虚拟摄像机的运动方式与轨迹。\n* 可选类型：static shot, handheld camera, dolly zoom, pan, tracking shot, follow subject, focus pull。\n* 示例：\n  * “Handheld camera follows the running dog.”\n  * “Slow pan upwards to reveal the full height of the building.”\n  * “Camera zooms in on the character's face.”\n\n### e. 风格描述 (Style Descriptors)\n\n* 设定整体动态节奏和视觉美学。\n* 维度包括：\n  * 运动速率：slow motion, fast-paced, time-lapse\n  * 动态质感：live-action realism, smooth animation, stop-motion, hyperrealistic\n  * 艺术风格：cinematic, dreamlike, retro film look, dramatic lighting, vibrant colors\n* 示例：\n  * “The subject walks in the rain, cinematic, slow motion.”\n  * “Sunset over the city, time-lapse, vibrant colors, wide-angle shot.”\n\n## ✅ 提示词最佳实践\n\n* 精炼直接：使用英文、语言简洁明了，避免歧义。\n* 聚焦动态：明确描述动作与变化，避免静态重复。\n* 肯定式指令：用积极、明确的描述，避免负面指令。\n  * 推荐：“remains still” 而非 “does not move”。\n* 简化句法：避免长句和复杂的从句结构。\n* 非对话指令：直接陈述所需动态，避免口语请求。\n* 迭代优化：从简单动作开始，逐步增加复杂元素进行验证优化。\n\n## 📤 输出要求\n\n请将精心设计的英文视频提示词严格置于 XML 标签中输出，无任何额外元素：\n<prompt_en>Your precisely crafted English video prompt here.</prompt_en>\n\n* 提示词严格控制在200词以内。\n* 确保独立完整、可直接用于顶级AI视频生成模型。\n* 描述精准、凝练且富有视觉表现力。\n\n",
+          "passthroughBinaryImages": true
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 1.9,
+      "position": [
+        544,
+        176
+      ],
+      "id": "7e9997ab-dd38-4499-b7b6-5bb7e2856ae7",
+      "name": "视频提示词-图片动态视频",
+      "retryOnFail": true
+    },
+    {
+      "parameters": {
+        "url": "={{ $json.data.images[0].imageUrl }}",
+        "options": {
+          "response": {
+            "response": {
+              "responseFormat": "file"
+            }
+          }
+        }
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        320,
+        176
+      ],
+      "id": "e6abcb82-54d0-47c9-853e-527dcb6a83b7",
+      "name": "下载图片"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "756842f1-2847-41e8-a8a1-934efbd3de20",
+              "name": "视频提示词",
+              "value": "={{ $json.output.replace(/[\\s\\S]*<prompt_en>/, '').replace(/<\\/prompt_en>[\\s\\S]*/, '') }}",
+              "type": "string"
+            },
+            {
+              "id": "b0a67f14-7b0d-498e-a071-23da144fad73",
+              "name": "图片提示词",
+              "value": "={{ $('循环').item.json.english_prompt }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        912,
+        176
+      ],
+      "id": "c9c2c7cc-3931-4d39-ae6a-c4fc315fe613",
+      "name": "设置参数-视频提示词"
+    },
+    {
+      "parameters": {
+        "resource": "object",
+        "operation": "create",
+        "bucketName": "={{ $('设置参数-综合').first().json['Google Cloud Storage Bucket name'] }}",
+        "objectName": "={{$binary.data.fileName}}",
+        "createData": {},
+        "createQuery": {},
+        "encryptionHeaders": {},
+        "requestOptions": {}
+      },
+      "type": "n8n-nodes-base.googleCloudStorage",
+      "typeVersion": 1,
+      "position": [
+        -784,
+        -144
+      ],
+      "id": "03dfb41a-3d41-4a34-8a7e-49e6171d2311",
+      "name": "上传文件",
+      "retryOnFail": true
+    },
+    {
+      "parameters": {
+        "url": "={{ $json.response[0].file_url }}",
+        "options": {
+          "response": {
+            "response": {
+              "responseFormat": "file"
+            }
+          }
+        }
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        -1008,
+        -144
+      ],
+      "id": "501f3b5c-c6a1-4eeb-a9e6-c8dcc3e412e9",
+      "name": "下载视频"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "={{ $('设置参数-综合').item.json['NCA url'] }}/v1/ffmpeg/compose",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "x-api-key",
+              "value": "={{ $('设置参数-综合').item.json['NCA api key'] }}"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"id\": \"video-audio-fadeout\",\n  \"inputs\": [\n    {\n      \"file_url\": \"{{ $json.response }}\"\n    },\n    {\n      \"file_url\": \"{{ $('设置参数-综合').item.json['配乐网址'] }}\"\n    }\n  ],\n  \"filters\": [\n    {\n      \"filter\": \"[1:a]afade=t=out:st={{ Number($('设置参数-综合').item.json['场景数量']) * Number($('设置参数-综合').item.json['单个视频时长']) - 3 }}:d=3[aout]\"\n    }\n  ],\n  \"outputs\": [\n    {\n      \"options\": [\n        {\n          \"option\": \"-map\",\n          \"argument\": \"0:v:0\"\n        },\n        {\n          \"option\": \"-map\",\n          \"argument\": \"[aout]\"\n        },\n        {\n          \"option\": \"-c:v\",\n          \"argument\": \"libx264\"\n        },\n        {\n          \"option\": \"-c:a\",\n          \"argument\": \"aac\"\n        },\n        {\n          \"option\": \"-shortest\",\n          \"argument\": null\n        }\n      ]\n    }\n  ],\n  \"metadata\": {\n    \"duration\": true,\n    \"thumbnail\": true\n  }\n}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        -1456,
+        -144
+      ],
+      "id": "b3b7d186-d34b-4157-89e2-574c37854855",
+      "name": "声音合成-裁剪"
+    },
+    {
+      "parameters": {
+        "jsCode": "/**\n * n8n Function   |  视频 URL 列表聚合器\n *\n * 输入示例（单条或多条 item 均可）：\n * {\n *   \"data\": [\n *     { \"video\": \"https://example.com/a.mp4\" },\n *     { \"video\": \"https://example.com/b.mp4\" }\n *   ]\n * }\n *\n * 输出示例：\n * {\n *   \"video_urls\": [\n *     { \"video_url\": \"https://example.com/a.mp4\" },\n *     { \"video_url\": \"https://example.com/b.mp4\" }\n *   ]\n * }\n */\n\nconst items = $input.all();    // 1) 读取所有输入 item\nconst videoUrls = [];          // 2) 用于收集结果\n\nitems.forEach(item => {\n\t// ---- 解析 data 数组 ----\n\tconst dataArr = item.json?.data;\n\tif (!Array.isArray(dataArr)) return;          // data 不是数组 → 跳过\n\n\tdataArr.forEach(obj => {\n\t\t// 3) 优先抓取常见结构 { video: \"https://...\" }\n\t\tif (obj?.video && typeof obj.video === 'string') {\n\t\t\tvideoUrls.push({ video_url: obj.video });\n\t\t\treturn;\n\t\t}\n\n\t\t// 4) 兼容其他常见字段（可按需增删）\n\t\tconst fallback = obj?.url || obj?.video_url;\n\t\tif (fallback && typeof fallback === 'string') {\n\t\t\tvideoUrls.push({ video_url: fallback });\n\t\t}\n\t});\n});\n\n// ---- 输出 ----\n// 单条 item，包含完整数组\nreturn [\n\t{\n\t\tjson: {\n\t\t\tvideo_urls: videoUrls\n\t\t}\n\t}\n];\n\n/*\n * 若想改成「多条 item，每条只含一个 video_url」，改用下面这行：\n * return videoUrls.map(v => ({ json: v }));\n */"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -1888,
+        -144
+      ],
+      "id": "aeec1e4b-d426-4412-897b-5136b8045e08",
+      "name": "视频网址拼接"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "={{ $('设置参数-综合').item.json['NCA url'] }}/v1/video/concatenate",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "x-api-key",
+              "value": "={{ $('设置参数-综合').item.json['NCA api key'] }}"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ { \"video_urls\": $json.video_urls } }}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        -1664,
+        -144
+      ],
+      "id": "46d13dcc-9503-40b5-8e21-75724bbe3b94",
+      "name": "视频拼接"
+    },
+    {
+      "parameters": {
+        "url": "={{ $json['参考视频'] }}",
+        "options": {
+          "response": {
+            "response": {
+              "responseFormat": "file",
+              "outputPropertyName": "mp4"
+            }
+          }
+        }
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        -4976,
+        336
+      ],
+      "id": "8cacab65-c931-47b8-9794-eedecdc097eb",
+      "name": "下载分析视频"
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=## 爆款视频画面提示词的示例：\n{{ $json['提示词示例'] }}\n\n## 场景数量：\n{{ $json['场景数量'] }}\n\n## 选定主题的序号:\n{{ Math.floor(Math.random() * 30) + 1 }} \n\n## 候选视频主题列表: \n{{ $json['主题汇总'] }}",
+        "hasOutputParser": true,
+        "options": {
+          "systemMessage": "=# 爆款视频主题选择与场景生成器\n## 任务：\n\n你的任务是扮演一个经验丰富的爆款视频策划师。当用户提供“多个候选的视频主题”列表以及一个“指定的序号”时，你需要：\n\n1.  从用户提供的“候选视频主题列表”中，严格按照列表的顺序，并根据用户在输入中指定的序号 ，选择相应的主题作为本次生成内容的基础。\n2.  针对这个选定的主题，参考用户提供的爆款视频画面提示词示例，构思并生成包含中英文场景描述的视频场景。\n3.  最终结果必须以包含主题中文、英文、场景数量及场景中英文描述的 JSON 格式输出。\n\n## 用户输入说明：\n从用户那里获取以下三类信息：\n1.  爆款视频画面提示词的示例:\n    用户可以提供一些他们认为能够构成爆款视频的典型画面或场景的描述性提示词。这些示例将帮助AI理解用户期望的画面风格和内容方向。\n2.  场景数量确定\n3.  选定主题的序号: 一个数字，由用户提供，指明从“候选视频主题列表”中选择第几个主题。\n4.  候选视频主题列表: 多个候选视频主题的列表。\n\n## 输出规则：\n### 1. 主题选择\n从用户提供的“候选视频主题列表”中，必须严格按照列表的顺序，选择用户在输入信息中指定的序号作为本次生成内容的基础。如果序号不存在，则随机生成一个序号选择一个。\n注意根据序号提取序号下所有内容，整合为一个视频主题。\n\n### 2. 场景构思与描述\n对于选定的主题和确定的场景数量，你需要为每个场景构思具体内容：\na. 参考用户示例: 在构思场景时，应积极参考用户提供的“爆款视频画面提示词的示例”，理解用户期望的视觉风格、节奏感、情感基调或内容倾向，并将这些元素融入到为选定主题设计的场景中。\nb. 主题相关性: 每个场景都必须紧密围绕选定的视频主题展开，共同构成一个有逻辑、有吸引力的叙事或展示序列。确保场景之间有自然的过渡和联系。\nc. 中英文描述: 为每个构思出的场景提供简洁、生动、且具有画面感的中文描述和对应的准确英文翻译。描述应能清晰传达场景的核心内容和视觉效果。\n\n### 3. 主题翻译\n为选定的视频主题提供准确的中文名称。如果用户提供的主题本身是对象且包含明确的标题，则直接使用该标题。\n为选定的视频主题提供对应的、自然的英文翻译。\n\n## 输出格式要求：\n请严格按照以下 JSON 结构输出结果。确保所有字符串值都包含在双引号内，并且JSON结构完整有效。\n{\n    \"video_description_zh\": \"<选定主题的中文400 字描述>\",\n    \"video_description_en\": \"<选定主题的英文400 字描述>\",\n    \"suitable_scene_count\": \"<明确标注或合理推断的场景数量>\"\n}"
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 1.9,
+      "position": [
+        -5344,
+        80
+      ],
+      "id": "8e08dfac-dc1a-4f1f-8c98-9ed2c6c165f8",
+      "name": "视频主题生成",
+      "retryOnFail": true
+    },
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "triggerAtHour": 17
+            }
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [
+        -5792,
+        224
+      ],
+      "id": "8ed09524-1014-418d-b640-8894bf452416",
+      "name": "自动化"
+    },
+    {
+      "parameters": {
+        "schemaType": "manual",
+        "inputSchema": "{\n    \"video_description_zh\": \"<选定主题的中文描述>\",\n    \"video_description_en\": \"<选定主题的英文描述>\",\n    \"suitable_scene_count\": \"<明确标注或合理推断的场景数量>\"\n}"
+      },
+      "type": "@n8n/n8n-nodes-langchain.outputParserStructured",
+      "typeVersion": 1.2,
+      "position": [
+        -5184,
+        304
+      ],
+      "id": "22c36894-aafa-428b-bf49-2a2f338b59ea",
+      "name": "Structured Output Parser"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "90660f43-f4f4-43e4-b0a5-d485d720aabe",
+              "name": "视频主题",
+              "value": "={{ $json.output.video_description_en }}",
+              "type": "string"
+            },
+            {
+              "id": "af98d1c8-91f9-48ea-9ce6-949ca16a602a",
+              "name": "场景数量",
+              "value": "={{ $json.output.suitable_scene_count }}",
+              "type": "string"
+            },
+            {
+              "id": "5e039d12-52a6-4443-81b6-b176a6a5444b",
+              "name": "分支",
+              "value": "自动化",
+              "type": "string"
+            },
+            {
+              "id": "9734b476-fbbb-419e-8fd9-4e3b6c414f3f",
+              "name": "提示词示例",
+              "value": "={{ $('主题').item.json['提示词示例'] }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        -4976,
+        80
+      ],
+      "id": "3e1d98e9-edc9-4cc7-823b-cedbea61c5dc",
+      "name": "设置参数-视频主题"
+    },
+    {
+      "parameters": {
+        "operation": "completion",
+        "respondWith": "showText",
+        "responseText": "=<pre>\n\n{{ $json['视频网址'] }}\n\n</pre>",
+        "limitWaitTime": true,
+        "resumeUnit": "minutes"
+      },
+      "type": "n8n-nodes-base.form",
+      "typeVersion": 1,
+      "position": [
+        -128,
+        -224
+      ],
+      "id": "70182a93-8c64-4856-9d53-c75bcdac00fe",
+      "name": "跳转视频",
+      "webhookId": "2c927904-2ec7-4f5c-9080-7c5cd2be2824"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "f13ed052-d4e4-4af8-a651-3d76fb737026",
+              "name": "视频网址",
+              "value": "={{$node[\"上传文件\"].json[\"mediaLink\"]\n  .replace(\n    /https:\\/\\/storage\\.googleapis\\.com\\/download\\/storage\\/v1\\/b\\/([^\\/]+)\\/o\\/([^?]+)\\?generation=[^&]+&alt=media/,\n    \"https://storage.googleapis.com/$1/$2\"\n  )\n}}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        -576,
+        -144
+      ],
+      "id": "66114778-d888-466a-b5dc-86fd20f073f6",
+      "name": "设置参数-最终视频网址"
+    },
+    {
+      "parameters": {
+        "mode": "combine",
+        "combineBy": "combineByPosition",
+        "numberInputs": 3,
+        "options": {
+          "includeUnpaired": true
+        }
+      },
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 3.1,
+      "position": [
+        -3872,
+        320
+      ],
+      "id": "9c3042bb-199b-4efc-b344-d222a1514b08",
+      "name": "路由-表单"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://generativelanguage.googleapis.com/upload/v1beta/files",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            {
+              "name": "key",
+              "value": "={{ $('设置参数-综合').item.json.gemini }}"
+            }
+          ]
+        },
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "X-Goog-Upload-Protocol",
+              "value": "resumable"
+            },
+            {
+              "name": "X-Goog-Upload-Command",
+              "value": "start"
+            },
+            {
+              "name": "X-Goog-Upload-Header-Content-Length",
+              "value": "={{ $json.fileSize }}"
+            },
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n    \"file\": {\n      \"display_name\": \"{{ $json.fileName }}\"\n    }\n  }",
+        "options": {
+          "response": {
+            "response": {
+              "fullResponse": true
+            }
+          }
+        }
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        -4096,
+        144
+      ],
+      "id": "64a53810-9b53-4f81-96cb-c7e246ca9836",
+      "name": "视频预处理"
+    },
+    {
+      "parameters": {
+        "mode": "combine",
+        "combineBy": "combineByPosition",
+        "numberInputs": 3,
+        "options": {
+          "includeUnpaired": true
+        }
+      },
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 3.1,
+      "position": [
+        -4752,
+        144
+      ],
+      "id": "549ca46e-e7cc-4950-b617-043458daeac9",
+      "name": "路由-自动化"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://openapi.liblibai.cloud{{ $('设置参数-综合').item.json['Liblib 生图'] }}?AccessKey={{ $('设置参数-综合').item.json['Liblib AccessKey'] }}&Signature={{ $json.signature }}&Timestamp={{ $('设置参数-综合').item.json.Timestamp }}&SignatureNonce={{ $('设置参数-综合').item.json.SignatureNonce }}",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n    \"templateUuid\": \"e10adc3949ba59abbe56e057f20f883e\",\n    \"generateParams\": {\n        \"checkPointId\": \"{{ $('设置参数-综合').item.json['主模型编号'] }}\",\n        \"prompt\": {{ JSON.stringify($('遍历').item.json.english_prompt) }},\n        \"negativePrompt\": \"ng_deepnegative_v1_75t,(badhandv4:1.2),EasyNegative,(worst quality:2),\",\n        \"sampler\": 1,\n        \"steps\": 28,\n        \"cfgScale\": 3.5,\n        \"width\": 1024,\n        \"height\": 576,\n        \"imgCount\": 1,\n        \"randnSource\": 0,\n        \"seed\": -1,\n        \"restoreFaces\": 0,\n        \"additionalNetwork\": [\n            {\n                \"modelId\": \"{{ $('设置参数-综合').item.json['Lora 编号'] }}\",\n                \"weight\": 0.8\n            }\n        ],\n        \"hiResFixInfo\": {\n            \"hiresSteps\": 30,\n            \"hiresDenoisingStrength\": 0.7,\n            \"upscaler\": 11,\n            \"resizedWidth\": 2048,\n            \"resizedHeight\": 1152\n        }\n    }\n}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        -1456,
+        176
+      ],
+      "id": "f8a118f0-ddcd-499d-9564-6c601252eff2",
+      "name": "Liblib 生图"
+    },
+    {
+      "parameters": {
+        "amount": 1,
+        "unit": "minutes"
+      },
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "position": [
+        -1232,
+        176
+      ],
+      "id": "ec6f88d6-a144-484c-9ba7-4b060deaf071",
+      "name": "等待",
+      "webhookId": "6fb85bed-6770-4d5d-a6c8-88594db0b732"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "741fc5ba-a75a-4105-8900-5dfc807ff68d",
+              "name": "raw",
+              "value": "={{ $('设置参数-综合').item.json['Liblib 生图'] }}&{{ $('设置参数-综合').item.json.Timestamp }}&{{ $('设置参数-综合').item.json.SignatureNonce }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        -2112,
+        176
+      ],
+      "id": "29a34b4b-11d5-49e2-b937-c87423f93659",
+      "name": "Liblib拼接-生图"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "741fc5ba-a75a-4105-8900-5dfc807ff68d",
+              "name": "raw",
+              "value": "={{ $('设置参数-综合').item.json['Liblib 结果'] }}&{{ $('设置参数-综合').item.json.Timestamp }}&{{ $('设置参数-综合').item.json.SignatureNonce }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        -1008,
+        128
+      ],
+      "id": "b5a65afd-c9f6-463b-a1f2-7cf9b84d57eb",
+      "name": "Liblib拼接-结果"
+    },
+    {
+      "parameters": {
+        "action": "hmac",
+        "type": "=SHA1",
+        "value": "={{ $json.raw }}",
+        "secret": "={{ $('设置参数-综合').item.json['Liblib SecretKey'] }}",
+        "encoding": "base64"
+      },
+      "type": "n8n-nodes-base.crypto",
+      "typeVersion": 1,
+      "position": [
+        -784,
+        128
+      ],
+      "id": "3a7ecde4-ec79-4cb5-a018-321fda26c10d",
+      "name": "签名-结果"
+    },
+    {
+      "parameters": {
+        "action": "hmac",
+        "type": "=SHA1",
+        "value": "={{ $json.raw }}",
+        "secret": "={{ $('设置参数-综合').item.json['Liblib SecretKey'] }}",
+        "encoding": "base64"
+      },
+      "type": "n8n-nodes-base.crypto",
+      "typeVersion": 1,
+      "position": [
+        -1888,
+        176
+      ],
+      "id": "d644038b-7bf3-4b4d-a66b-637ca13bf18d",
+      "name": "签名-生图"
+    },
+    {
+      "parameters": {
+        "jsCode": "// 获取CryptoJS节点输出的签名\nconst base64Signature = $input.first().json.data;\n\n// 转换为URL-safe Base64格式（不补全位数）\nconst urlSafeSignature = base64Signature\n    .replace(/\\+/g, '-')    // 将 + 替换为 -\n    .replace(/\\//g, '_')    // 将 / 替换为 _\n    .replace(/=+$/, '');    // 去掉末尾的 = 填充字符\n\nreturn {\n    json: {\n        ...($input.first().json),  // 保留原有数据\n        signature: urlSafeSignature  // 添加最终签名\n    }\n};\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -1664,
+        176
+      ],
+      "id": "d4d9f6f7-c8a8-4934-bb14-8223db2d98ca",
+      "name": "URL 安全-生图"
+    },
+    {
+      "parameters": {
+        "jsCode": "// 获取CryptoJS节点输出的签名\nconst base64Signature = $input.first().json.data;\n\n// 转换为URL-safe Base64格式（不补全位数）\nconst urlSafeSignature = base64Signature\n    .replace(/\\+/g, '-')    // 将 + 替换为 -\n    .replace(/\\//g, '_')    // 将 / 替换为 _\n    .replace(/=+$/, '');    // 去掉末尾的 = 填充字符\n\nreturn {\n    json: {\n        ...($input.first().json),  // 保留原有数据\n        signature: urlSafeSignature  // 添加最终签名\n    }\n};\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -576,
+        128
+      ],
+      "id": "0fe39846-8f0a-4b53-b77b-c76c6610f9a6",
+      "name": "URL 安全-结果"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://openapi.liblibai.cloud{{ $('设置参数-综合').item.json['Liblib 结果'] }}?AccessKey={{ $('设置参数-综合').item.json['Liblib AccessKey'] }}&Signature={{ $json.signature }}&Timestamp={{ $('设置参数-综合').item.json.Timestamp }}&SignatureNonce={{ $('设置参数-综合').item.json.SignatureNonce }}",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "generateUuid",
+              "value": "={{ $('Liblib 生图').item.json.data.generateUuid }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        -352,
+        96
+      ],
+      "id": "f9463634-5141-4183-9ce3-e326fc3c4a1c",
+      "name": "Liblib 结果"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "29897656-ff7e-4b3b-9da1-25c4667d28d8",
+              "leftValue": "={{ $('Liblib 结果').item.json.data.images[0].imageUrl }}",
+              "rightValue": "https",
+              "operator": {
+                "type": "string",
+                "operation": "contains"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        96,
+        176
+      ],
+      "id": "1273d44c-511f-41a9-9ea9-61a44f45d909",
+      "name": "判断-Liblib"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "29897656-ff7e-4b3b-9da1-25c4667d28d8",
+              "leftValue": "={{ $json.msg }}",
+              "rightValue": "敏感",
+              "operator": {
+                "type": "string",
+                "operation": "contains"
+              }
+            },
+            {
+              "id": "ca38bf69-d531-4cce-a9f3-88bb4e83be16",
+              "leftValue": "={{ $json.msg }}",
+              "rightValue": "无效",
+              "operator": {
+                "type": "string",
+                "operation": "contains"
+              }
+            }
+          ],
+          "combinator": "or"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        -128,
+        128
+      ],
+      "id": "338533a9-6793-4e35-9962-80a83d7df2ea",
+      "name": "判断-Liblib敏感"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "444be79f-dde9-43d4-a92d-8cf9a6c60012",
+              "name": "场景数量",
+              "value": "4",
+              "type": "string"
+            },
+            {
+              "id": "10cef148-320e-4e90-ac6d-0be1bfdfe27a",
+              "name": "提示词示例",
+              "value": "=Film Photography,A group of African elephants drinking at a muddy watering hole in the heat of midday,while a herd of Cape buffalo waits nearby,tense yet respectful. The sun beats down harshly,casting strong shadows across cracked earth and drying trees. Some elephants spray water over their backs. Realistic texture,wildlife documentary style,high dynamic range,sharp focus on animal behavior and interaction.,",
+              "type": "string"
+            },
+            {
+              "id": "7519c5f4-4038-47ff-8efd-f3469b509d4c",
+              "name": "参考视频",
+              "value": "https://pub-b65afb21c951453a872a026d19411abe.r2.dev/dongwushijie.mp4",
+              "type": "string"
+            },
+            {
+              "id": "3501593a-511c-4064-a411-dcc37830457f",
+              "name": "主题汇总",
+              "value": "=仿照 bbc 非洲动物纪录片生成一组介绍非洲大草原上的狮子的场景，画面纪实风格，展示原始真实的画面风格以及动物之王狮子的原始风貌。",
+              "type": "string"
+            },
+            {
+              "id": "35873205-92eb-4e35-83a9-04b85289061d",
+              "name": "海边",
+              "value": "=1.  **Maldives** - 马尔代夫\n2.  **Bora Bora, French Polynesia** - 法属波利尼西亚，波拉波拉岛\n3.  **Santorini, Greece** - 希腊，圣托里尼岛\n4.  **Maui, Hawaii, USA** - 美国夏威夷州，毛伊岛\n5.  **Phuket, Thailand** - 泰国，普吉岛\n6.  **Bali, Indonesia** - 印度尼西亚，巴厘岛\n7.  **Amalfi Coast, Italy** - 意大利，阿马尔菲海岸\n8.  **Cancun, Mexico** - 墨西哥，坎昆\n9.  **Seychelles** - 塞舌尔\n10. **Fiji** - 斐济\n11. **Gold Coast, Australia** - 澳大利亚，黄金海岸\n12. **Ibiza, Spain** - 西班牙，伊维萨岛\n13. **Mykonos, Greece** - 希腊，米科诺斯岛\n14. **Crete, Greece** - 希腊，克里特岛\n15. **Copacabana, Rio de Janeiro, Brazil** - 巴西里约热内卢，科帕卡巴纳海滩\n16. **Waikiki Beach, Honolulu, Hawaii, USA** - 美国夏威夷州檀香山，威基基海滩\n17. **Nice, French Riviera, France** - 法国，法属里维埃拉，尼斯\n18. **St. Barts (Saint Barthélemy)** - 圣巴泰勒米岛（简称圣巴特）\n19. **Turks and Caicos Islands** - 特克斯和凯科斯群岛\n20. **Barbados** - 巴巴多斯\n21. **The Bahamas** - 巴哈马\n22. **Palawan, Philippines** - 菲律宾，巴拉望岛\n23. **Kauai, Hawaii, USA** - 美国夏威夷州，可爱岛\n24. **Capri, Italy** - 意大利，卡普里岛\n25. **Ko Phi Phi, Thailand** - 泰国，皮皮岛\n26. **Zanzibar, Tanzania** - 坦桑尼亚，桑给巴尔\n27. **Mauritius** - 毛里求斯\n28. **Langkawi, Malaysia** - 马来西亚，兰卡威\n29. **Galapagos Islands, Ecuador** - 厄瓜多尔，加拉帕戈斯群岛\n30. **Fernando de Noronha, Brazil** - 巴西，费尔南多·迪诺罗尼亚群岛",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        -5568,
+        224
+      ],
+      "id": "33b5f7c8-a85c-4370-bd50-7c6685628a51",
+      "name": "主题"
+    },
+    {
+      "parameters": {
+        "modelName": "models/gemini-2.5-flash-preview-05-20",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+      "typeVersion": 1,
+      "position": [
+        -5392,
+        304
+      ],
+      "id": "f333277b-ae3e-4fe5-9263-16472969c250",
+      "name": "Google Gemini Chat Model",
+      "credentials": {
+        "googlePalmApi": {
+          "id": "3N5wdjCgo3NS6T9S",
+          "name": "Google Gemini(PaLM) Api account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "={{ $('设置参数-综合').item.json['NCA url'] }}/v1/ffmpeg/compose",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "x-api-key",
+              "value": "={{ $('设置参数-综合').item.json['NCA api key'] }}"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"id\": \"add-logo-and-keep-audio\",\n  \"inputs\": [\n    {\n      \"file_url\": \"{{ $json.response[0].file_url }}\"\n    },\n    {\n      \"file_url\": \"{{ $('设置参数-综合').item.json['Logo 网址'] }}\"\n    }\n  ],\n  \"filters\": [\n    {\n      \"filter\": \"[1:v]scale=w=120:h=100:force_original_aspect_ratio=decrease[logo];[0:v][logo]overlay=W-w-20:20[outv]\"\n    }\n  ],\n  \"outputs\": [\n    {\n      \"options\": [\n        {\n          \"option\": \"-map\",\n          \"argument\": \"[outv]\"\n        },\n        {\n          \"option\": \"-map\",\n          \"argument\": \"0:a?\"\n        },\n        {\n          \"option\": \"-c:v\",\n          \"argument\": \"libx264\"\n        },\n        {\n          \"option\": \"-crf\",\n          \"argument\": \"23\"\n        },\n        {\n          \"option\": \"-preset\",\n          \"argument\": \"medium\"\n        },\n        {\n          \"option\": \"-c:a\",\n          \"argument\": \"aac\"\n        },\n        {\n          \"option\": \"-shortest\"\n        }\n      ]\n    }\n  ]\n}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        -1232,
+        -144
+      ],
+      "id": "f3e1cdba-f5f1-4448-b17a-1f272d12f9d5",
+      "name": "水印合成"
+    },
+    {
+      "parameters": {
+        "resource": "databasePage",
+        "databaseId": {
+          "__rl": true,
+          "value": "203017a9-05fd-8089-814a-e17c63dcb20c",
+          "mode": "list",
+          "cachedResultName": "自动化视频",
+          "cachedResultUrl": "https://www.notion.so/203017a905fd8089814ae17c63dcb20c"
+        },
+        "title": "={{ $workflow.id }}-{{ $execution.id }}",
+        "propertiesUi": {
+          "propertyValues": [
+            {
+              "key": "视频链接|url",
+              "ignoreIfEmpty": true,
+              "urlValue": "={{ $('设置参数-最终视频网址').item.json['视频网址'] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.notion",
+      "typeVersion": 2.2,
+      "position": [
+        96,
+        -144
+      ],
+      "id": "79055e11-c8bc-4611-a9d3-7f49192b909e",
+      "name": "保存视频"
+    },
+    {
+      "parameters": {
+        "rules": {
+          "values": [
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "id": "0859e5a4-b59b-442e-9ae0-c78cff421186",
+                    "leftValue": "={{ $('设置参数-综合').item.json['分支'] }}",
+                    "rightValue": "表单",
+                    "operator": {
+                      "type": "string",
+                      "operation": "contains"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "表单"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "leftValue": "={{ $('设置参数-综合').item.json['分支'] }}",
+                    "rightValue": "自动化",
+                    "operator": {
+                      "type": "string",
+                      "operation": "contains"
+                    },
+                    "id": "43aba877-703b-4116-a7cf-530c695d1786"
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "自动化"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.switch",
+      "typeVersion": 3.2,
+      "position": [
+        -352,
+        -144
+      ],
+      "id": "88e9b4da-1e52-4dd9-aed9-ddaae26712c9",
+      "name": "分支判断"
+    }
+  ],
+  "pinData": {},
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "shared": [
+    {
+      "updatedAt": "2025-10-23T14:20:05.064Z",
+      "createdAt": "2025-10-23T14:20:05.064Z",
+      "role": "workflow:owner",
+      "workflowId": "JQtEY1D1ouFKpLNi",
+      "projectId": "daqvnEo6t4UA2J5k"
+    }
+  ],
+  "staticData": null,
+  "tags": [],
+  "triggerCount": 0,
+  "updatedAt": "2025-10-23T14:20:05.000Z",
+  "versionId": "95c13d4f-0a9b-469f-81b8-fd50902a152c"
+}
