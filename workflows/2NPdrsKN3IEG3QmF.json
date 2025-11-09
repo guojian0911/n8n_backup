@@ -1,0 +1,1207 @@
+{
+  "active": false,
+  "connections": {
+    "When clicking ‘Test workflow’": {
+      "main": [
+        [
+          {
+            "node": "Caption2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Job Status": {
+      "main": [
+        [
+          {
+            "node": "If",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "If": {
+      "main": [
+        [
+          {
+            "node": "Download File",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Wait",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wait": {
+      "main": [
+        [
+          {
+            "node": "Job Status",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Caption2": {
+      "main": [
+        [
+          {
+            "node": "Job Status",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2025-10-23T14:36:22.546Z",
+  "id": "2NPdrsKN3IEG3QmF",
+  "isArchived": false,
+  "meta": null,
+  "name": "NCA 测试工作流",
+  "nodes": [
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        -32,
+        304
+      ],
+      "id": "b2486582-b384-4a2f-aa47-8444020f33e7",
+      "name": "When clicking ‘Test workflow’"
+    },
+    {
+      "parameters": {
+        "content": "## 视频相关",
+        "height": 280,
+        "width": 1760,
+        "color": 2
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        -176,
+        1040
+      ],
+      "typeVersion": 1,
+      "id": "7c2a83a5-6e5a-4450-a052-ae5742feb542",
+      "name": "Sticky Note"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://no-code-architects-toolkit-397082500881.us-central1.run.app/v1/video/caption",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "x-api-key",
+              "value": "xy"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "{\n  \"video_url\": \"https://storage.googleapis.com/xiangyugongzuoliu/58da620c-db1d-41fa-956f-dd0106af9d59.mp4\",\n  \"settings\": {\n    \"line_color\": \"#FFFFFF\",\n    \"word_color\": \"#FFFF00\",\n    \"all_caps\": false,\n    \"max_words_per_line\": 3,\n    \"font_size\": 60,\n    \"bold\": false,\n    \"italic\": false,\n    \"underline\": false,\n    \"strikeout\": false,\n    \"outline_width\": 3,\n    \"shadow_offset\": 4,\n    \"style\": \"highlight\",\n    \"font_family\": \"The Bold Font\",\n    \"position\": \"bottom_center\"\n  },\n  \"id\": \"gdrive-five\"\n}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        -32,
+        1120
+      ],
+      "id": "73457042-ef8c-4884-b540-3873392ff817",
+      "name": "Caption"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://no-code-architects-toolkit-397082500881.us-central1.run.app/v1/video/thumbnail",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "x-api-key",
+              "value": "xy"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "{\n    \"video_url\": \"https://storage.googleapis.com/sgplabs-general-storage/Vertical%20Video.mp4\",\n    \"second\": 0,\n    \"id\": \"gdrive-five\"\n}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        176,
+        1120
+      ],
+      "id": "13d29ee5-4d6c-462a-aae8-664204496ef8",
+      "name": "Thumbnail"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://no-code-architects-toolkit-397082500881.us-central1.run.app/v1/video/concatenate",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "x-api-key",
+              "value": "xy"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "{\n    \"video_urls\":[\n        {\"video_url\":\"https://storage.googleapis.com/sgplabs-general-storage/Vertical%20Video.mp4\"},\n        {\"video_url\":\"https://storage.googleapis.com/sgplabs-general-storage/Vertical%20Video.mp4\"}\n    ],\n    \"id\": \"2323\"\n}",
+        "options": {
+          "redirect": {
+            "redirect": {}
+          }
+        }
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        368,
+        1120
+      ],
+      "id": "46a0ff3b-e622-4346-8e4c-82d917079f3d",
+      "name": "Concatenate"
+    },
+    {
+      "parameters": {
+        "content": "## FFmpeg 相关",
+        "height": 280,
+        "width": 1760,
+        "color": 3
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        -176,
+        1360
+      ],
+      "typeVersion": 1,
+      "id": "4fd43cd0-3d09-4075-b45b-99c28facafd8",
+      "name": "Sticky Note1"
+    },
+    {
+      "parameters": {
+        "content": "## NCA工具箱",
+        "height": 280,
+        "width": 1760,
+        "color": 4
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        -176,
+        -160
+      ],
+      "typeVersion": 1,
+      "id": "36dfdf9a-2f01-44dd-ae62-105276ec814c",
+      "name": "Sticky Note2"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://no-code-architects-toolkit-397082500881.us-central1.run.app/v1/ffmpeg/compose",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "x-api-key",
+              "value": "xy"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "{\n  \"inputs\": [\n    {\n      \"file_url\": \"https://storage.googleapis.com/sgplabs-general-storage/Horizontal Video.mp4\"\n    }\n  ],\n  \"filters\": [\n    {\n      \"filter\": \"[0:v]trim=start=10:end=15,setpts=PTS-STARTPTS[vout];[0:a]atrim=start=10:end=15,asetpts=PTS-STARTPTS[aout]\"\n    }\n  ],\n  \"outputs\": [\n    {\n      \"options\": [\n        { \"option\": \"-map\", \"argument\": \"[vout]\" },\n        { \"option\": \"-map\", \"argument\": \"[aout]\" },\n        { \"option\": \"-c:v\", \"argument\": \"libx264\" },\n        { \"option\": \"-c:a\", \"argument\": \"aac\" }\n      ]\n    }\n  ],\n  \"metadata\": {\n    \"thumbnail\": true,\n    \"filesize\": true,\n    \"duration\": true,\n    \"bitrate\": true,\n    \"encoder\": true\n  },\n  \"id\": \"extract_clip_001\"\n}\n",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        -32,
+        1440
+      ],
+      "id": "52b1487e-1e22-4d36-8303-8af6bcbf8f2c",
+      "name": "Clip"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://no-code-architects-toolkit-397082500881.us-central1.run.app/v1/ffmpeg/compose",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "x-api-key",
+              "value": "xy"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "{\n  \"inputs\": [\n    {\n      \"file_url\": \"https://storage.googleapis.com/sgplabs-general-storage/Horizontal Video.mp4\"\n    }\n  ],\n  \"filters\": [\n    {\n      \"filter\": \"[0:v]crop=658:1080:656:0,scale=1080:1920[v]\"\n    }\n  ],\n  \"outputs\": [\n    {\n      \"options\": [\n        {\n          \"option\": \"-map\",\n          \"argument\": \"[v]\"\n        },\n        {\n          \"option\": \"-map\",\n          \"argument\": \"0:a\"\n        },\n        {\n          \"option\": \"-c:a\",\n          \"argument\": \"copy\"\n        }\n      ]\n    }\n  ],\n  \"webhook_url\": \"https://sgplabs.app.n8n.cloud/webhook-test/8e468964-bef8-4e97-a65f-5674280f6788\"\n}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        176,
+        1440
+      ],
+      "id": "75c0e1a8-2194-4b5d-b34a-00eccf0b9875",
+      "name": "Crop"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://no-code-architects-toolkit-397082500881.us-central1.run.app/v1/ffmpeg/compose",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "x-api-key",
+              "value": "xy"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "{\n    \"inputs\": [\n        {\n            \"file_url\": \"https://storage.googleapis.com/sgplabs-general-storage/vertical%20pic%20skool.png\"\n        },\n        {\n            \"file_url\": \"https://storage.googleapis.com/sgplabs-general-storage/tweet%20pic.png\"\n        }\n    ],\n    \"filters\": [\n        {\n            \"filter\": \"[0:v][1:v]overlay=(main_w-overlay_w)/2:(main_h-overlay_h)/2+200[outv]\"\n        }\n    ],\n    \"outputs\": [\n        {\n            \"options\": [\n                {\n                    \"option\": \"-map\",\n                    \"argument\": \"[outv]\"\n                },\n                {\n                    \"option\": \"-f\",\n                    \"argument\": \"image2\"\n                }\n            ]\n        }\n    ],\n    \"id\": \"image-overlay\"\n}\n",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        576,
+        1440
+      ],
+      "id": "d52cf019-234e-4a04-81fe-d08a36c7b746",
+      "name": "Tweet Pic"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://no-code-architects-toolkit-397082500881.us-central1.run.app/v1/ffmpeg/compose",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "x-api-key",
+              "value": "xy"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "{\n    \"inputs\": [\n        {\n            \"file_url\": \"https://storage.googleapis.com/sgplabs-general-storage/Vertical%20Video.mp4\"\n        },\n        {\n            \"file_url\": \"https://storage.googleapis.com/sgplabs-general-storage/tweet%20pic.png\"\n        }\n    ],\n    \"filters\": [\n        {\n            \"filter\": \"[0:v][1:v]overlay=(main_w-overlay_w)/2:(main_h-overlay_h)/2+200[outv]\"\n        }\n    ],\n    \"outputs\": [\n        {\n            \"options\": [\n                {\n                    \"option\": \"-map\",\n                    \"argument\": \"[outv]\"\n                },\n                {\n                    \"option\": \"-map\",\n                    \"argument\": \"0:a\"\n                },\n                {\n                    \"option\": \"-c:v\",\n                    \"argument\": \"libx264\"\n                },\n                {\n                    \"option\": \"-c:a\",\n                    \"argument\": \"aac\"\n                },\n                {\n                    \"option\": \"-f\",\n                    \"argument\": \"mp4\"\n                }\n            ]\n        }\n    ],\n    \"id\": \"video-overlay\"\n}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        768,
+        1440
+      ],
+      "id": "78d1cb45-1d96-4c0e-81c9-b5b76b773748",
+      "name": "Tweet Vid"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://nca.aiworkflowstudio.com/v1/ffmpeg/compose",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "x-api-key",
+              "value": "xy"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "{\n  \"inputs\": [\n    {\n      \"file_url\": \"https://storage.googleapis.com/sgplabs-general-storage/reaction.mp4\",\n      \"options\": []\n    },\n    {\n      \"file_url\": \"https://storage.googleapis.com/sgplabs-general-storage/skool%2Breaction.mp4\",\n      \"options\": []\n    }\n  ],\n  \"filters\": [\n    {\n      \"filter\": \"[1:v]scale=1080:1920[preScaledB];[preScaledB]scale=iw*0.45:ih*0.45[scaledB];[scaledB]drawbox=x=0:y=0:w=iw:h=ih:color=red@1:t=25[borderB];[0:v][borderB]overlay=x=500:y=950:enable='lte(t,39)'[videoOut]\"\n    },\n    {\n      \"filter\": \"[0:a][1:a]amix=inputs=2:duration=longest[audioOut]\"\n    }\n  ],\n  \"outputs\": [\n    {\n      \"options\": [\n        { \"option\": \"-map\", \"argument\": \"[videoOut]\" },\n        { \"option\": \"-map\", \"argument\": \"[audioOut]\" },\n        { \"option\": \"-c:v\", \"argument\": \"libx264\" },\n        { \"option\": \"-c:a\", \"argument\": \"aac\" },\n        { \"option\": \"-b:a\", \"argument\": \"192k\" }\n      ]\n    }\n  ],\n  \"id\": \"recWwxk2Xnc8lxJSu\"\n}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        976,
+        1440
+      ],
+      "id": "eeabfb54-93d6-49cd-a0fa-fc0da661307d",
+      "name": "Reaction"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://no-code-architects-toolkit-397082500881.us-central1.run.app/v1/ffmpeg/compose",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "x-api-key",
+              "value": "xy"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "{\n  \"inputs\": [\n    {\n      \"file_url\": \"https://storage.googleapis.com/sgplabs-general-storage/vertical%20pic%20skool.png\"\n    }\n  ],\n  \"filters\": [\n    {\n      \"filter\": \"drawtext=text='Hello, World!':fontsize=70:fontcolor=white:x=(w-text_w)/2:y=(h-text_h)/2\"\n    }\n  ],\n  \"outputs\": [\n    {\n      \"options\": [\n        {\n          \"option\": \"-frames:v\",\n          \"argument\": \"1\"\n        },\n        {\n          \"option\": \"-c:v\",\n          \"argument\": \"mjpeg\"\n        },\n        {\n          \"option\": \"-f\",\n          \"argument\": \"image2\"\n        }\n      ]\n    }\n  ],\n  \"id\": \"drawtext-no-font-example\"\n}\n\n",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        1168,
+        1440
+      ],
+      "id": "a720582d-6979-4047-a993-85290d791d1e",
+      "name": "Drawtext"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://no-code-architects-toolkit-397082500881.us-central1.run.app/v1/ffmpeg/compose",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "x-api-key",
+              "value": "xy"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "{\n  \"id\": \"image_text_overlay\",\n  \"inputs\": [\n    {\n      \"file_url\": \"https://storage.googleapis.com/sgplabs-general-storage/Certificate.png\"\n    }\n  ],\n  \"filters\": [\n    {\n      \"filter\": \"[0:v]drawtext=text='Ved':fontsize=55:fontcolor=black:x=(w-text_w)/2:y=820[v1]\"\n    },\n    {\n      \"filter\": \"[v1]drawtext=text='Make Automation Workshop\\\\: Level 1':fontsize=30:fontcolor=black:x=(w-text_w)/2:y=1000[v2]\"\n    },\n    {\n      \"filter\": \"[v2]drawtext=text='Stephen G. Pope':fontsize=25:fontcolor=black:x=410:y=h-310[v3]\"\n    },\n    {\n      \"filter\": \"[v3]drawtext=text='9/13/24':fontsize=25:fontcolor=black:x=w-560:y=h-310[outv]\"\n    }\n  ],\n  \"outputs\": [\n    {\n      \"options\": [\n        {\n          \"option\": \"-map\",\n          \"argument\": \"[outv]\"\n        },\n        {\n          \"option\": \"-frames:v\",\n          \"argument\": \"1\"\n        },\n        {\n          \"option\": \"-c:v\",\n          \"argument\": \"mjpeg\"\n        },\n        {\n          \"option\": \"-f\",\n          \"argument\": \"image2\"\n        }\n      ]\n    }\n  ]\n}\n\n",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        1376,
+        1440
+      ],
+      "id": "428c5d05-ac99-4724-ad3a-b46bf84683e9",
+      "name": "Certificate"
+    },
+    {
+      "parameters": {
+        "content": "## 媒体相关",
+        "height": 280,
+        "width": 1760,
+        "color": 7
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        -176,
+        1680
+      ],
+      "typeVersion": 1,
+      "id": "ddafd9df-d5c6-4f87-bcba-06ba05825951",
+      "name": "Sticky Note3"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://no-code-architects-toolkit-397082500881.us-central1.run.app/v1/media/convert/mp3",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            {
+              "name": "x-api-key",
+              "value": "xy"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "{\n    \"media_url\":\"https://storage.googleapis.com/sgplabs-general-storage/Vertical%20Video.mp4\",\n    \"bitrate\": \"256k\",\n    \"sample_rate\": 44100,\n    \"id\": \"five\"\n}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        -32,
+        1760
+      ],
+      "id": "8437cd34-89ac-4284-851d-83a980cdb829",
+      "name": "Convert MP3"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://no-code-architects-toolkit-397082500881.us-central1.run.app/v1/media/transcribe",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "x-api-key",
+              "value": "xy"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "{\n    \"media_url\":\"https://storage.googleapis.com/xiangyugongzuoliu/58da620c-db1d-41fa-956f-dd0106af9d59.mp4\",\n    \"task\": \"transcribe\",\n    \"include_text\": true,\n    \"include_srt\": true,\n    \"response_type\": \"direct\",\n    \"language\": \"zh\",\n    \"words_per_line\": 4\n}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        176,
+        1760
+      ],
+      "id": "b6ea5bd8-ffcd-4c3b-9fe3-6cb427cf6244",
+      "name": "Transcribe"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://no-code-architects-toolkit-397082500881.us-central1.run.app/v1/media/silence",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "x-api-key",
+              "value": "xy"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "{\n    \"media_url\":\"https://storage.googleapis.com/sgplabs-general-storage/Vertical%20Video.mp4\",\n    \"duration\": 0.1\n}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        368,
+        1760
+      ],
+      "id": "4b711d78-1cf7-41de-aef0-e898036b59e5",
+      "name": "Silence"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://no-code-architects-toolkit-397082500881.us-central1.run.app/v1/BETA/media/download",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "x-api-key",
+              "value": "xy"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "{\n    \"media_url\":\"https://www.tiktok.com/@stephengpope/video/7496166998871739694\",\n    \"thumbnails\": {\n        \"download\": true\n    }\n}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        576,
+        1760
+      ],
+      "id": "fe8a6867-cf7c-43cc-a587-1dd243a75831",
+      "name": "Donwload (BETA)"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://no-code-architects-toolkit-397082500881.us-central1.run.app/v1/media/convert",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "x-api-key",
+              "value": "xy"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "{\n    \"media_url\":\"https://storage.googleapis.com/sgplabs-general-storage/Vertical%20Video.mp4\",\n    \"format\": \"mp3\"\n}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        768,
+        1760
+      ],
+      "id": "b395e0bc-ac68-40f7-888f-7f85531e3981",
+      "name": "Convert"
+    },
+    {
+      "parameters": {
+        "content": "## 图片",
+        "height": 280,
+        "width": 340,
+        "color": 3
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        -176,
+        704
+      ],
+      "typeVersion": 1,
+      "id": "7846925c-8349-4b64-884d-2a9363ae2424",
+      "name": "Sticky Note4"
+    },
+    {
+      "parameters": {
+        "url": "https://no-code-architects-toolkit-397082500881.us-central1.run.app/authenticate",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "x-api-key",
+              "value": "xy"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        -32,
+        -80
+      ],
+      "id": "a09ee5d4-df37-4561-8d88-80a4b79050c1",
+      "name": "Authenticate"
+    },
+    {
+      "parameters": {
+        "url": "https://no-code-architects-toolkit-397082500881.us-central1.run.app/v1/toolkit/test",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "x-api-key",
+              "value": "xy"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        176,
+        -80
+      ],
+      "id": "c740c31e-e1c4-4dc5-a734-6d7905d5df46",
+      "name": "Test"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://no-code-architects-toolkit-397082500881.us-central1.run.app/v1/image/convert/video",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "x-api-key",
+              "value": "xy"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "{\n    \"image_url\":\"https://storage.googleapis.com/sgplabs-general-storage/Vertical%20Image.png\",\n    \"length\": 10,\n    \"frame_rate\": 25,\n    \"zoom_speed\": 6,\n    \"id\": \"local-extract\"\n}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        -32,
+        784
+      ],
+      "id": "4c0a0c7e-05bb-4f4f-9b89-da97856d386e",
+      "name": "Convert Video"
+    },
+    {
+      "parameters": {
+        "content": "## 代码",
+        "height": 280,
+        "width": 300
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        208,
+        704
+      ],
+      "typeVersion": 1,
+      "id": "3a44c7f1-1591-4747-89a9-f17365102229",
+      "name": "Sticky Note5"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://no-code-architects-toolkit-397082500881.us-central1.run.app/v1/code/execute/python",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "x-api-key",
+              "value": "xy"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "{\n    \"code\": \"# Initial array of titles\\ntitles = [\\n    {\\\"title\\\": \\\"how i learned to code in 24 hours straight\\\"},\\n    {\\\"title\\\": \\\"making the perfect pizza at 3am\\\"},\\n    {\\\"title\\\": \\\"i survived on $1 food for a week\\\"},\\n    {\\\"title\\\": \\\"trying weird food combinations you suggested\\\"},\\n    {\\\"title\\\": \\\"we bought everything in the store challenge\\\"},\\n    {\\\"title\\\": \\\"my morning routine 2024 updated\\\"},\\n    {\\\"title\\\": \\\"exploring abandoned mansion gone wrong\\\"},\\n    {\\\"title\\\": \\\"pranking my roommate they moved out\\\"},\\n    {\\\"title\\\": \\\"what i eat in a day as a chef\\\"},\\n    {\\\"title\\\": \\\"building a treehouse in one day\\\"},\\n    {\\\"title\\\": \\\"i lived in a tiny house for 30 days\\\"},\\n    {\\\"title\\\": \\\"transforming my backyard into a water park\\\"},\\n    {\\\"title\\\": \\\"cooking every recipe in grandma's cookbook\\\"},\\n    {\\\"title\\\": \\\"learning 10 languages in 10 months\\\"},\\n    {\\\"title\\\": \\\"ultimate gaming setup tour 2024\\\"},\\n    {\\\"title\\\": \\\"surviving in the wilderness for 48 hours\\\"},\\n    {\\\"title\\\": \\\"turning my car into a mobile office\\\"},\\n    {\\\"title\\\": \\\"i bought everything facebook advertised to me\\\"},\\n    {\\\"title\\\": \\\"secret menu items at famous restaurants\\\"},\\n    {\\\"title\\\": \\\"surprising my parents with their dream vacation\\\"},\\n    {\\\"title\\\": \\\"extreme room makeover on a budget\\\"},\\n    {\\\"title\\\": \\\"trying every item at mcdonalds in one day\\\"},\\n    {\\\"title\\\": \\\"building a robot that does my homework\\\"},\\n    {\\\"title\\\": \\\"living on a boat for a month\\\"},\\n    {\\\"title\\\": \\\"testing viral tiktok life hacks\\\"},\\n    {\\\"title\\\": \\\"transforming my garage into a movie theater\\\"},\\n    {\\\"title\\\": \\\"cooking with random ingredients challenge\\\"},\\n    {\\\"title\\\": \\\"visiting every state in 50 days\\\"},\\n    {\\\"title\\\": \\\"making a dress from recycled materials\\\"},\\n    {\\\"title\\\": \\\"i followed a victorian schedule for a week\\\"},\\n    {\\\"title\\\": \\\"turning my basement into an arcade\\\"},\\n    {\\\"title\\\": \\\"trying every coffee drink at starbucks\\\"},\\n    {\\\"title\\\": \\\"building a treehouse mansion for my dog\\\"},\\n    {\\\"title\\\": \\\"learning to skateboard in 24 hours\\\"},\\n    {\\\"title\\\": \\\"extreme grocery shopping challenge\\\"},\\n    {\\\"title\\\": \\\"converting my van into a tiny home\\\"},\\n    {\\\"title\\\": \\\"making a song using only kitchen sounds\\\"},\\n    {\\\"title\\\": \\\"reading 100 books in 100 days\\\"},\\n    {\\\"title\\\": \\\"training for a marathon in 30 days\\\"},\\n    {\\\"title\\\": \\\"living without technology for a week\\\"},\\n    {\\\"title\\\": \\\"cooking breakfast with my eyes closed\\\"},\\n    {\\\"title\\\": \\\"building a secret underground bunker\\\"},\\n    {\\\"title\\\": \\\"trying every ice cream flavor in my city\\\"},\\n    {\\\"title\\\": \\\"making clothes from dollar store items\\\"},\\n    {\\\"title\\\": \\\"transforming my attic into a gaming room\\\"},\\n    {\\\"title\\\": \\\"surviving on instant noodles for a month\\\"},\\n    {\\\"title\\\": \\\"building a miniature city in my backyard\\\"},\\n    {\\\"title\\\": \\\"learning to juggle chainsaws blindfolded\\\"},\\n    {\\\"title\\\": \\\"exploring abandoned theme park at night\\\"},\\n    {\\\"title\\\": \\\"making a gourmet meal in a microwave\\\"}\\n]\\n\\n# Update the titles in the array\\nfor i in range(len(titles)):\\n    titles[i][\\\"title\\\"] = \\\" \\\".join(word.capitalize() for word in titles[i][\\\"title\\\"].split())\\n\\nreturn titles\",\n    \"timeout\": 30\n}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        304,
+        784
+      ],
+      "id": "1ec6dd3b-798d-4cb5-8de6-c9bcd8a66d20",
+      "name": "Execute Python"
+    },
+    {
+      "parameters": {
+        "content": "## S3 上传",
+        "height": 280,
+        "width": 300,
+        "color": 2
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        544,
+        704
+      ],
+      "typeVersion": 1,
+      "id": "efe4b74f-828e-409f-8e36-254129d50510",
+      "name": "Sticky Note6"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://no-code-architects-toolkit-397082500881.us-central1.run.app/v1/s3/upload",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "x-api-key",
+              "value": "xy"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "{\n    \"id\": \"media\",\n    \"file_url\": \"https://storage.googleapis.com/sgplabs-general-storage/Vertical%20Video.mp4\",\n    \"filename\": \"vertical Video.png\",\n    \"public\": true\n}\n",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        656,
+        784
+      ],
+      "id": "d0241701-48d4-4ab4-b756-7e9a4311c40a",
+      "name": "Upload S3"
+    },
+    {
+      "parameters": {
+        "content": "## 音频",
+        "height": 280,
+        "width": 300,
+        "color": 6
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        896,
+        704
+      ],
+      "typeVersion": 1,
+      "id": "be79996e-5963-4e02-9fc5-3edf1dc1799e",
+      "name": "Sticky Note7"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://no-code-architects-toolkit-397082500881.us-central1.run.app/v1/audio/concatenate",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "x-api-key",
+              "value": "xy"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "{\n    \"audio_urls\":[\n        {\"audio_url\":\"https://storage.googleapis.com/sgplabs-general-storage/I'm%20Back.mp3\"},\n        {\"audio_url\":\"https://storage.googleapis.com/sgplabs-general-storage/I'm%20Back.mp3\"}\n    ],\n    \"id\": \"2323\"\n}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        992,
+        784
+      ],
+      "id": "1b960ad0-1243-447a-ab18-bc9912d0a978",
+      "name": "Concatenate Audio"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://no-code-architects-toolkit-397082500881.us-central1.run.app/v1/media/metadata",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "x-api-key",
+              "value": "xy"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "{\n    \"media_url\":\"https://storage.googleapis.com/sgplabs-general-storage/Vertical%20Video.mp4\"\n}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        976,
+        1760
+      ],
+      "id": "062becd0-3324-4d15-a494-49811268cfa5",
+      "name": "metadata (video)"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://no-code-architects-toolkit-397082500881.us-central1.run.app/v1/media/metadata",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "x-api-key",
+              "value": "xy"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "{\n    \"media_url\":\"https://sgp-labs.nyc3.digitaloceanspaces.com/sgp-labs/b58e5b92-e4c5-431c-83f6-62dce70c90a8.mp3\"\n}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        1168,
+        1760
+      ],
+      "id": "4073f8b4-745f-40a1-bd2b-1a6d61c4bb13",
+      "name": "metadata (Audio)"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://no-code-architects-toolkit-397082500881.us-central1.run.app/v1/video/split",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "x-api-key",
+              "value": "xy"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "{\n  \"video_url\": \"https://storage.googleapis.com/sgplabs-general-storage/Vertical%20Video.mp4\",\n  \"splits\": [\n    {\n      \"start\": \"00:00:01\",\n      \"end\": \"00:00:02\"\n    },\n    {\n      \"start\": \"00:00:03\",\n      \"end\": \"00:00:05\"\n    }\n  ]\n}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        768,
+        1120
+      ],
+      "id": "3ac332d6-b5bd-4a01-a997-6c602b14b6f6",
+      "name": "Split Video"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://no-code-architects-toolkit-397082500881.us-central1.run.app/v1/video/cut",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "x-api-key",
+              "value": "xy"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "{\n  \"video_url\": \"https://storage.googleapis.com/sgplabs-general-storage/Vertical%20Video.mp4\",\n  \"cuts\": [\n    {\n      \"start\": \"00:00:01\",\n      \"end\": \"00:00:02\"\n    },\n    {\n      \"start\": \"00:00:03\",\n      \"end\": \"00:00:05\"\n    }\n  ]\n}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        576,
+        1120
+      ],
+      "id": "5a49b5f4-f35d-4aeb-aba7-1553850bad4f",
+      "name": "Cut Video"
+    },
+    {
+      "parameters": {
+        "content": "## Webhooks",
+        "height": 280,
+        "width": 360,
+        "color": 7
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        1232,
+        704
+      ],
+      "typeVersion": 1,
+      "id": "c791348e-c7f4-49ce-92b6-ef08640a8727",
+      "name": "Sticky Note9"
+    },
+    {
+      "parameters": {
+        "content": "## 异步任务轮询",
+        "height": 460,
+        "width": 1760,
+        "color": 6
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        -176,
+        192
+      ],
+      "typeVersion": 1,
+      "id": "994aa0c4-62da-4017-83a5-aeaeed9ede7f",
+      "name": "Sticky Note10"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://no-code-architects-toolkit-397082500881.us-central1.run.app/v1/toolkit/job/status",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "x-api-key",
+              "value": "xy"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"job_id\": \"{{ $('Caption2').item.json.job_id}}\"\n}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        656,
+        304
+      ],
+      "id": "e518fa44-9ada-4c45-9b84-ae95e687f689",
+      "name": "Job Status"
+    },
+    {
+      "parameters": {
+        "amount": 2
+      },
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "position": [
+        1344,
+        432
+      ],
+      "id": "082bf893-7597-457d-8fcd-5a45c5039811",
+      "name": "Wait",
+      "webhookId": "9f2d031d-a63b-4404-82c6-47ce1fe6dc84"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "1bd32662-74ef-4c9f-84fa-6d6687056da3",
+              "leftValue": "={{ $json.response.job_status }}",
+              "rightValue": "done",
+              "operator": {
+                "type": "string",
+                "operation": "equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        992,
+        304
+      ],
+      "id": "12c549c3-3615-4928-88f1-165c7797c4fd",
+      "name": "If"
+    },
+    {
+      "parameters": {
+        "url": "={{ $('Job Status').item.json.response.response.response }}",
+        "options": {
+          "response": {
+            "response": {
+              "responseFormat": "file"
+            }
+          }
+        }
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        1344,
+        272
+      ],
+      "id": "a4085977-a71a-4ed0-93c9-b466a339881f",
+      "name": "Download File"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://no-code-architects-toolkit-397082500881.us-central1.run.app/v1/audio/concatenate",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "x-api-key",
+              "value": "xy"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "{\n    \"audio_urls\":[\n        {\"audio_url\":\"https://storage.googleapis.com/sgplabs-general-storage/I'm%20Back.mp3\"},\n        {\"audio_url\":\"https://storage.googleapis.com/sgplabs-general-storage/I'm%20Back.mp3\"}\n    ],\n    \"id\": \"2323\",\n    \"webhook_url\": \"https://sgplabs.app.n8n.cloud/webhook-test/8e468964-bef8-4e97-a65f-5674280f6788\"\n}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        1344,
+        784
+      ],
+      "id": "40bf62e1-eacf-43d2-b24e-ce3a7f76ac40",
+      "name": "Concatenate Audio1"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://no-code-architects-toolkit-397082500881.us-central1.run.app/v1/video/trim",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "x-api-key",
+              "value": "xy"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "{\n    \"video_url\": \"https://storage.googleapis.com/sgplabs-general-storage/Vertical%20Video.mp4\",\n    \"start\": \"00:00:05\",\n    \"end\": \"00:00:07\"\n}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        976,
+        1120
+      ],
+      "id": "ed8a98b5-7ef1-4008-8e80-909712117548",
+      "name": "Trim"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://no-code-architects-toolkit-397082500881.us-central1.run.app/v1/ffmpeg/compose",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "x-api-key",
+              "value": "xy"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "{\n  \"inputs\": [\n    {\n      \"file_url\": \"https://storage.googleapis.com/sgplabs-general-storage/Vertical%20Video.mp4\"\n    },\n    {\n      \"file_url\": \"https://storage.googleapis.com/sgplabs-general-storage/NCA%20Logo.png\"\n    }\n  ],\n  \"filters\": [\n    {\n      \"filter\": \"[1:v]scale=150:150[logo];[0:v][logo]overlay=x=50:y=main_h-overlay_h-50\"\n    }\n  ],\n  \"outputs\": [\n    {\n      \"options\": [\n        { \"option\": \"-f\", \"argument\": \"mp4\" },\n        { \"option\": \"-c:v\", \"argument\": \"libx264\" }\n      ]\n    }\n  ],\n  \"metadata\": {\n    \"thumbnail\": true,\n    \"filesize\": true,\n    \"duration\": true,\n    \"bitrate\": true\n  },\n  \"id\": \"overlay_logo\"\n}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        368,
+        1440
+      ],
+      "id": "801baa78-ece6-42a0-bac6-4751a455d0c2",
+      "name": "Logo"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://no-code-architects-toolkit-397082500881.us-central1.run.app/v1/toolkit/job/status",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "x-api-key",
+              "value": "xy"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "{\n    \"job_id\": \"2af56415-463c-48e7-a78c-dc5b6717c20b\"\n}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        576,
+        -80
+      ],
+      "id": "16a13dca-ae89-41af-a956-85e254214d03",
+      "name": "Job Status-id"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://no-code-architects-toolkit-397082500881.us-central1.run.app/v1/toolkit/jobs/status",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "x-api-key",
+              "value": "xy"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "{\n    \"since_seconds\": 3600\n}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        368,
+        -80
+      ],
+      "id": "8f1b59e0-58bf-4176-8e52-82b64a1bf663",
+      "name": "Jobs Status-时间"
+    },
+    {
+      "parameters": {
+        "content": "## 使用方法\n### NCA 测试时，只需选择 test 端点，若测试结果显示 success，即可说明 NCA 部署正常，可直接用于工作流。其他端点仅作示例，便于在需要时参考进行更多测试。\n![xiangyugongzuoliu-zbCh8Ito001948](https://xiangyugongzuoliu-1309206323.cos.ap-beijing.myqcloud.com/20250725115258796.png) ",
+        "height": 800,
+        "width": 660,
+        "color": 7
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        1696,
+        -160
+      ],
+      "typeVersion": 1,
+      "id": "dd851246-533b-4615-a49f-4c089a9841e1",
+      "name": "Sticky Note8"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://no-code-architects-toolkit-397082500881.us-central1.run.app/v1/video/caption",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "x-api-key",
+              "value": "xy"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "{\n  \"video_url\": \"https://storage.googleapis.com/sgplabs-general-storage/Vertical%20Video.mp4\",\n  \"settings\": {\n    \"line_color\": \"#FFFFFF\",\n    \"word_color\": \"#FFFF00\",\n    \"all_caps\": false,\n    \"max_words_per_line\": 3,\n    \"font_size\": 60,\n    \"bold\": false,\n    \"italic\": false,\n    \"underline\": false,\n    \"strikeout\": false,\n    \"outline_width\": 3,\n    \"shadow_offset\": 4,\n    \"style\": \"highlight\",\n    \"font_family\": \"The Bold Font\",\n    \"position\": \"bottom_center\"\n  },\n  \"id\": \"gdrive-five\",\n  \"webhook_url\": \"\"\n}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        304,
+        304
+      ],
+      "id": "9e0dc30d-e2b7-44fd-8afd-68b3818705b2",
+      "name": "Caption2"
+    }
+  ],
+  "pinData": {},
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "shared": [
+    {
+      "updatedAt": "2025-10-23T14:36:22.549Z",
+      "createdAt": "2025-10-23T14:36:22.549Z",
+      "role": "workflow:owner",
+      "workflowId": "2NPdrsKN3IEG3QmF",
+      "projectId": "daqvnEo6t4UA2J5k"
+    }
+  ],
+  "staticData": null,
+  "tags": [],
+  "triggerCount": 0,
+  "updatedAt": "2025-10-23T14:36:22.000Z",
+  "versionId": "213e4ebf-64a3-4946-b2a8-7d7e993f0fb3"
+}
