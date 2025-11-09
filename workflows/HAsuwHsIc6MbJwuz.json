@@ -1,0 +1,1684 @@
+{
+  "active": false,
+  "connections": {
+    "需求输入": {
+      "main": [
+        [
+          {
+            "node": "设置参数-综合",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "设置参数-综合": {
+      "main": [
+        [
+          {
+            "node": "任务分类",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "获取列表": {
+      "main": [
+        [
+          {
+            "node": "遍历文章",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "获取详情-纯文本": {
+      "main": [
+        [
+          {
+            "node": "判断字数",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "查重": {
+      "main": [
+        [
+          {
+            "node": "判断重复",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "判断重复": {
+      "main": [
+        [
+          {
+            "node": "循环文章",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "获取详情-纯文本",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "任务分类": {
+      "main": [
+        [
+          {
+            "node": "获取数据",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "处理页数",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "获取数据集",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "获取数据集": {
+      "main": [
+        [
+          {
+            "node": "微调平台",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "判断字数": {
+      "main": [
+        [
+          {
+            "node": "文章标准化处理",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "循环文章",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "循环文章": {
+      "main": [
+        [
+          {
+            "node": "结束",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "查重",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "处理页数": {
+      "main": [
+        [
+          {
+            "node": "遍历页数",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "遍历页数": {
+      "main": [
+        [
+          {
+            "node": "获取列表",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "遍历文章": {
+      "main": [
+        [
+          {
+            "node": "循环文章",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenRouter Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Model Selector",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "微调平台": {
+      "main": [
+        [
+          {
+            "node": "格式化数据集-Google Vertex",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "格式化数据集-Together",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "格式化数据集-Google Vertex": {
+      "main": [
+        [
+          {
+            "node": "压缩处理-Google Vertex",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "获取数据": {
+      "main": [
+        [
+          {
+            "node": "遍历数据-加工",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "压缩处理-Google Vertex": {
+      "main": [
+        [
+          {
+            "node": "压缩-Google Vertex",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "压缩-Google Vertex": {
+      "main": [
+        [
+          {
+            "node": "返回数据集-Google Vertex",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "遍历数据-加工": {
+      "main": [
+        [
+          {
+            "node": "结束-加工",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "文章标准化处理-加工",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "格式化数据集-Together": {
+      "main": [
+        [
+          {
+            "node": "压缩处理-Together",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "压缩处理-Together": {
+      "main": [
+        [
+          {
+            "node": "压缩-Together",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "压缩-Together": {
+      "main": [
+        [
+          {
+            "node": "返回数据集-Together",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "xAI Grok Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Model Selector",
+            "type": "ai_languageModel",
+            "index": 2
+          }
+        ]
+      ]
+    },
+    "Model Selector": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "文章提示词生成",
+            "type": "ai_languageModel",
+            "index": 0
+          },
+          {
+            "node": "文章标准化处理",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Gemini Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Model Selector",
+            "type": "ai_languageModel",
+            "index": 1
+          }
+        ]
+      ]
+    },
+    "OpenRouter Chat Model2": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Model Selector1",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "xAI Grok Chat Model1": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Model Selector1",
+            "type": "ai_languageModel",
+            "index": 2
+          }
+        ]
+      ]
+    },
+    "Google Gemini Chat Model1": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Model Selector1",
+            "type": "ai_languageModel",
+            "index": 1
+          }
+        ]
+      ]
+    },
+    "Model Selector1": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "文章标准化处理-加工",
+            "type": "ai_languageModel",
+            "index": 0
+          },
+          {
+            "node": "文章提示词生成-加工",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "文章标准化处理": {
+      "main": [
+        [
+          {
+            "node": "等待",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "等待": {
+      "main": [
+        [
+          {
+            "node": "文章提示词生成",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "文章提示词生成": {
+      "main": [
+        [
+          {
+            "node": "保存",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "文章标准化处理-加工": {
+      "main": [
+        [
+          {
+            "node": "等待-加工",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "文章提示词生成-加工": {
+      "main": [
+        [
+          {
+            "node": "保存-加工",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "等待-加工": {
+      "main": [
+        [
+          {
+            "node": "文章提示词生成-加工",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "保存": {
+      "main": [
+        [
+          {
+            "node": "循环文章",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "保存-加工": {
+      "main": [
+        [
+          {
+            "node": "遍历数据-加工",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2025-10-19T15:41:16.731Z",
+  "id": "HAsuwHsIc6MbJwuz",
+  "isArchived": false,
+  "meta": null,
+  "name": "Gemini 微调-数据集生成",
+  "nodes": [
+    {
+      "parameters": {
+        "formTitle": "微调数据集",
+        "formFields": {
+          "values": [
+            {
+              "fieldLabel": "微调名称",
+              "requiredField": true
+            },
+            {
+              "fieldLabel": "任务",
+              "fieldType": "dropdown",
+              "fieldOptions": {
+                "values": [
+                  {
+                    "option": "获取加工数据集"
+                  },
+                  {
+                    "option": "加工数据集"
+                  },
+                  {
+                    "option": "输出数据集"
+                  }
+                ]
+              },
+              "requiredField": true
+            },
+            {
+              "fieldLabel": "微调平台",
+              "fieldType": "dropdown",
+              "fieldOptions": {
+                "values": [
+                  {
+                    "option": "Google Vertex"
+                  },
+                  {
+                    "option": "Together"
+                  }
+                ]
+              },
+              "requiredField": true
+            },
+            {
+              "fieldLabel": "模型平台",
+              "fieldType": "dropdown",
+              "fieldOptions": {
+                "values": [
+                  {
+                    "option": "Gemini"
+                  },
+                  {
+                    "option": "OpenRouter"
+                  },
+                  {
+                    "option": "Gork"
+                  }
+                ]
+              }
+            },
+            {
+              "fieldLabel": "文章链接",
+              "fieldType": "textarea"
+            },
+            {
+              "fieldLabel": "采集页数",
+              "fieldType": "dropdown",
+              "fieldOptions": {
+                "values": [
+                  {
+                    "option": "1"
+                  },
+                  {
+                    "option": "2"
+                  },
+                  {
+                    "option": "3"
+                  },
+                  {
+                    "option": "4"
+                  },
+                  {
+                    "option": "5"
+                  },
+                  {
+                    "option": "1-5"
+                  },
+                  {
+                    "option": "5-10"
+                  },
+                  {
+                    "option": "10-15"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "options": {
+          "appendAttribution": false,
+          "buttonLabel": "开始",
+          "path": "finetunning"
+        }
+      },
+      "id": "ebc4dc8f-96cd-495e-9d59-5f6608987825",
+      "name": "需求输入",
+      "type": "n8n-nodes-base.formTrigger",
+      "position": [
+        -1680,
+        736
+      ],
+      "webhookId": "b89d0ab2-bd08-4e8d-bc8a-ec2353305427",
+      "typeVersion": 2.2
+    },
+    {
+      "parameters": {
+        "operation": "completion",
+        "completionTitle": "获取完成",
+        "completionMessage": "感谢您的使用！",
+        "limitWaitTime": true,
+        "resumeUnit": "minutes",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.form",
+      "typeVersion": 1,
+      "position": [
+        144,
+        624
+      ],
+      "id": "608251f5-1c76-4729-9f10-dd7554c0277e",
+      "name": "结束",
+      "webhookId": "75273bee-bc71-43d9-9c7f-6a40b2db6459"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "db28aa86-c4ad-42e4-ab4d-39b0127e0e74",
+              "name": "极致了 API key",
+              "value": "JZLa95061ece",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        -1488,
+        736
+      ],
+      "id": "099b85ac-683f-4801-9148-c6c34ecf6b44",
+      "name": "设置参数-综合"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://www.dajiala.com/fbmain/monitor/v3/post_history",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "biz"
+            },
+            {
+              "name": "url",
+              "value": "={{ $('需求输入').item.json['文章链接'] }}"
+            },
+            {
+              "name": "name"
+            },
+            {
+              "name": "page",
+              "value": "={{ $json.page }}"
+            },
+            {
+              "name": "key",
+              "value": "={{ $('设置参数-综合').item.json['极致了 API key'] }}"
+            },
+            {
+              "name": "verifycode"
+            }
+          ]
+        },
+        "options": {
+          "redirect": {}
+        }
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        -464,
+        736
+      ],
+      "id": "c6154bc9-2e8f-4a40-96b1-37fa235b652b",
+      "name": "获取列表"
+    },
+    {
+      "parameters": {
+        "url": "https://www.dajiala.com/fbmain/monitor/v3/article_detail",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            {
+              "name": "url",
+              "value": "={{ $('循环文章').item.json.url }}"
+            },
+            {
+              "name": "key",
+              "value": "={{ $('设置参数-综合').item.json['极致了 API key'] }}"
+            },
+            {
+              "name": "mode",
+              "value": "2"
+            },
+            {
+              "name": "verifycode"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        544,
+        768
+      ],
+      "id": "94faa4ab-16ec-4fb7-b42a-b90a6a48746a",
+      "name": "获取详情-纯文本"
+    },
+    {
+      "parameters": {
+        "authentication": "nocoDbApiToken",
+        "operation": "getAll",
+        "workspaceId": "wmpdb3r5",
+        "projectId": "puql4h81qa7y3nz",
+        "table": "mj2lr9sk31ivfrr",
+        "returnAll": true,
+        "options": {
+          "where": "=(标题,eq,{{ $('循环文章').item.json[\"title\"] }})"
+        }
+      },
+      "type": "n8n-nodes-base.nocoDb",
+      "typeVersion": 3,
+      "position": [
+        144,
+        800
+      ],
+      "id": "d686ee63-84a0-4248-bc23-8bd0d510f61b",
+      "name": "查重",
+      "alwaysOutputData": true
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "2110e89e-a87b-483c-95e4-0b96b08fb0db",
+              "leftValue": "={{ $json.Id }}",
+              "rightValue": "",
+              "operator": {
+                "type": "number",
+                "operation": "exists",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        336,
+        800
+      ],
+      "id": "09eacbcd-5469-4ba3-9a38-126bf37186c6",
+      "name": "判断重复"
+    },
+    {
+      "parameters": {
+        "authentication": "nocoDbApiToken",
+        "operation": "getAll",
+        "workspaceId": "wmpdb3r5",
+        "projectId": "puql4h81qa7y3nz",
+        "table": "mj2lr9sk31ivfrr",
+        "returnAll": true,
+        "options": {
+          "where": "=(类别,eq,内容类)~and(微调名称,eq,{{ $('需求输入').item.json['微调名称'] }})"
+        }
+      },
+      "type": "n8n-nodes-base.nocoDb",
+      "typeVersion": 3,
+      "position": [
+        -864,
+        1216
+      ],
+      "id": "75e4658a-31f0-48df-9410-9b47949aac2c",
+      "name": "获取数据集",
+      "alwaysOutputData": true
+    },
+    {
+      "parameters": {
+        "rules": {
+          "values": [
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "id": "2420b9c0-0d13-4a3d-a1fe-eb182f19bb47",
+                    "leftValue": "={{ $('需求输入').item.json['任务'] }}",
+                    "rightValue": "加工数据集",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "加工数据集"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "leftValue": "={{ $('需求输入').item.json['任务'] }}",
+                    "rightValue": "获取加工数据集",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals"
+                    },
+                    "id": "049a69f7-d3fc-40b7-a3e8-3db1c203b389"
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "获取加工数据集"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "id": "9177cb51-698c-45d5-a120-3a6096335d11",
+                    "leftValue": "={{ $('需求输入').item.json['任务'] }}",
+                    "rightValue": "输出数据集",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "输出数据集"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.switch",
+      "typeVersion": 3.2,
+      "position": [
+        -1280,
+        720
+      ],
+      "id": "5038cf62-d840-40fa-a7da-9d3f6326f73e",
+      "name": "任务分类"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "98badf82-402c-4521-83bf-76c7d304e072",
+              "leftValue": "={{ Number($node[\"获取详情-纯文本\"].json.content.trim().length) }}",
+              "rightValue": 1000,
+              "operator": {
+                "type": "number",
+                "operation": "gt"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        720,
+        768
+      ],
+      "id": "8ff8f8a8-d1a7-410f-90f0-2ed8df2058ae",
+      "name": "判断字数"
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "n8n-nodes-base.splitInBatches",
+      "typeVersion": 3,
+      "position": [
+        -48,
+        736
+      ],
+      "id": "a3a08d5f-62a1-43c6-89cf-4bda584d815e",
+      "name": "循环文章"
+    },
+    {
+      "parameters": {
+        "jsCode": "// 从“需求输入”节点拿到表单字段“采集页数”\nconst raw = String($item(0).$node[\"需求输入\"].json[\"采集页数\"] ?? \"\").trim();\n\nif (!raw) {\n  throw new Error(\"采集页数为空：请在表单中选择，例如 1 或 1-4\");\n}\n\n// 解析：支持单个数字，或范围 a-b（含边界，顺序不影响）\nlet pages = [];\nconst m = raw.match(/^(\\d+)\\s*-\\s*(\\d+)$/);\n\nif (m) {\n  let start = parseInt(m[1], 10);\n  let end   = parseInt(m[2], 10);\n  if (start > end) [start, end] = [end, start]; // 允许 4-1 这种写法\n  for (let p = start; p <= end; p++) pages.push(p);\n} else if (/^\\d+$/.test(raw)) {\n  pages = [parseInt(raw, 10)];\n} else {\n  throw new Error(`不支持的采集页数格式：${raw}（仅支持单个数字或范围如 1-4）`);\n}\n\n// 输出：每个页码一个 item，后续可逐条遍历采集\nreturn pages.map(p => ({ json: { page: p } }));"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -864,
+        736
+      ],
+      "id": "fd4a935b-b981-4e90-8456-4471f2d8908b",
+      "name": "处理页数"
+    },
+    {
+      "parameters": {
+        "fieldToSplitOut": "page",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.splitOut",
+      "typeVersion": 1,
+      "position": [
+        -656,
+        736
+      ],
+      "id": "91bfa2e4-6a06-4e73-ba62-3e6ca931d2d5",
+      "name": "遍历页数"
+    },
+    {
+      "parameters": {
+        "fieldToSplitOut": "data",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.splitOut",
+      "typeVersion": 1,
+      "position": [
+        -272,
+        736
+      ],
+      "id": "06e2484f-fbd8-4807-9d8c-47de3d4b759a",
+      "name": "遍历文章"
+    },
+    {
+      "parameters": {
+        "model": "x-ai/grok-4-fast:free",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenRouter",
+      "typeVersion": 1,
+      "position": [
+        1088,
+        1200
+      ],
+      "id": "c2b73f24-fd70-4ec6-8c5c-15376c8a8199",
+      "name": "OpenRouter Chat Model"
+    },
+    {
+      "parameters": {
+        "rules": {
+          "values": [
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "id": "f1bef812-b217-4950-b325-2f972987beb6",
+                    "leftValue": "={{ $('需求输入').item.json['微调平台'] }}",
+                    "rightValue": "Google Vertex",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "Google Vertex"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "leftValue": "={{ $('需求输入').item.json['微调平台'] }}",
+                    "rightValue": "Together",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals"
+                    },
+                    "id": "6d7eb3d8-2238-428b-9cd1-c226b3cf5816"
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "Together"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.switch",
+      "typeVersion": 3.2,
+      "position": [
+        -656,
+        1216
+      ],
+      "id": "e43919db-18ce-4179-8d7c-332231f5811e",
+      "name": "微调平台"
+    },
+    {
+      "parameters": {
+        "jsCode": "/**\n * n8n Code node\n * Mode: Run Once For All Items\n * Language: JavaScript\n * Source data node: 「获取数据集」\n * Name source node: 「需求输入」.json['微调名称']\n * Filename pattern:\n *   训练集: <微调名称>-YYYY/MM/DD.train.jsonl\n *   验证集: <微调名称>-YYYY/MM/DD.val.jsonl\n */\n\nconst SRC_NODE = \"获取数据集\";\nconst NAME_NODE = \"需求输入\";\n\nconst srcItems = $items(SRC_NODE, 0, 0);\nconst nameItems = $items(NAME_NODE, 0, 0);\nconst fineTuneNameRaw = nameItems?.[0]?.json?.['微调名称'];\n\nconst MAX_CHARS = 100000;\nconst clip = (s) => {\n  if (typeof s !== 'string') s = s == null ? '' : String(s);\n  s = s.trim();\n  return s.length > MAX_CHARS ? s.slice(0, MAX_CHARS) : s;\n};\n\n// 仅清理文件名中不合法字符（允许后续我们自己加的 / 用作目录）\nconst sanitizeBase = (s) => String(s ?? '')\n  .replace(/[\\\\:*?\"<>|\\r\\n]+/g, \"-\")  // 不替换正斜杠\n  .replace(/\\s+/g, \" \")\n  .trim() || \"Gemini\";\n\nconst pad = (n) => String(n).padStart(2, \"0\");\nconst now = new Date();\nconst y = now.getFullYear();\nconst mo = pad(now.getMonth() + 1);\nconst d  = pad(now.getDate());\n\n// 目标文件名基底：<name>-YYYY/MM/DD\nconst baseName = sanitizeBase(fineTuneNameRaw);\nconst fileBase = `${baseName}-${y}/${mo}/${d}`;\nconst fileNameTrain = `${fileBase}.train.jsonl`;\nconst fileNameVal   = `${fileBase}.val.jsonl`;\n\n// 汇集原始可用样本\nconst records = [];\nlet skipped = 0;\n\nfor (const it of srcItems) {\n  const j = it.json || {};\n  const prompt = clip(j['提示词'] ?? '');\n  const answer = clip(j['标准化正文'] ?? '');\n  if (!prompt || !answer) { skipped++; continue; }\n\n  const record = {\n    contents: [\n      { role: \"user\",  parts: [{ text: prompt }] },\n      { role: \"model\", parts: [{ text: answer }] }\n    ]\n  };\n  records.push(JSON.stringify(record));\n}\n\n// 随机打乱以进行切分\nconst shuffleInPlace = (arr) => {\n  for (let i = arr.length - 1; i > 0; i--) {\n    const j = Math.floor(Math.random() * (i + 1));\n    [arr[i], arr[j]] = [arr[j], arr[i]];\n  }\n  return arr;\n};\nshuffleInPlace(records);\n\n// 切分：验证集 = 全部样本的 10%，训练集 = 剩余 90%\nconst total = records.length;\nconst valCount = total > 0 ? Math.max(1, Math.floor(total * 0.10)) : 0;\nconst valRecords = records.slice(0, valCount);\nconst trainRecords = records.slice(valCount);\n\nconst jsonlTrain = trainRecords.join('\\n');\nconst jsonlVal = valRecords.join('\\n');\n\n// 生成返回的两个二进制条目：训练集与验证集\nconst trainItem = {\n  json: {\n    type: \"train\",\n    fileName: fileNameTrain,     // e.g. liyueliang-2025/09/11.train.jsonl\n    count: trainRecords.length,\n    valCount,                    // 便于查看比例\n    total,\n    skipped,\n    ratioValToTotal: total ? +(valCount / total).toFixed(4) : 0,\n    jsonl: jsonlTrain\n  },\n  binary: {\n    data: {\n      data: Buffer.from(jsonlTrain, 'utf8').toString('base64'),\n      fileName: fileNameTrain,\n      mimeType: 'application/x-ndjson'\n    }\n  }\n};\n\nconst valItem = {\n  json: {\n    type: \"val\",\n    fileName: fileNameVal,       // e.g. liyueliang-2025/09/11.val.jsonl\n    count: valRecords.length,\n    total,\n    skipped,\n    ratioValToTotal: total ? +(valCount / total).toFixed(4) : 0,\n    jsonl: jsonlVal\n  },\n  binary: {\n    data: {\n      data: Buffer.from(jsonlVal, 'utf8').toString('base64'),\n      fileName: fileNameVal,\n      mimeType: 'application/x-ndjson'\n    }\n  }\n};\n\nreturn [trainItem, valItem];"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -432,
+        1120
+      ],
+      "id": "94c3c4fa-700b-40f8-84c7-c28ebe22e819",
+      "name": "格式化数据集-Google Vertex"
+    },
+    {
+      "parameters": {
+        "operation": "completion",
+        "respondWith": "returnBinary",
+        "completionTitle": "微调数据已经生成",
+        "completionMessage": "请前往谷歌云 Vertex 进行微调训练，感谢使用翔宇微调工具集！",
+        "limitWaitTime": true,
+        "resumeUnit": "minutes",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.form",
+      "typeVersion": 2.3,
+      "position": [
+        160,
+        1120
+      ],
+      "id": "b6e623a2-ac88-467f-a57c-0695f945e800",
+      "name": "返回数据集-Google Vertex",
+      "webhookId": "52fc5751-2e11-471c-8bcc-2b29095dc805"
+    },
+    {
+      "parameters": {
+        "authentication": "nocoDbApiToken",
+        "operation": "getAll",
+        "workspaceId": "wmpdb3r5",
+        "projectId": "puql4h81qa7y3nz",
+        "table": "mj2lr9sk31ivfrr",
+        "returnAll": true,
+        "options": {
+          "where": "=(类别,eq,内容类)~and(微调名称,eq,{{ $('需求输入').item.json['微调名称'] }})"
+        }
+      },
+      "type": "n8n-nodes-base.nocoDb",
+      "typeVersion": 3,
+      "position": [
+        -848,
+        -32
+      ],
+      "id": "6362a3a4-0a46-4515-993a-6709ac3f900e",
+      "name": "获取数据"
+    },
+    {
+      "parameters": {
+        "jsCode": "let binaries = {}, binary_keys = [];\n\nconst sanitize = (name, fallback) => {\n  const n = String(name || fallback || 'file');\n  // 去掉路径分隔和不合法字符\n  return n\n    .replace(/[\\/\\\\]/g, '-')            // 目录分隔符 -> 连字符\n    .replace(/[:*?\"<>|]/g, '-')         // Windows 非法字符\n    .replace(/\\s+/g, ' ')               // 可选：多空格折叠\n    .trim();\n};\n\nfor (const [index, inputItem] of Object.entries($input.all())) {\n  const src = inputItem.binary.data;      // 原二进制\n  const bin = { ...src };                  // 浅拷贝，避免原地修改\n\n  // 取原始文件名与后缀\n  const origName = bin.fileName || `data_${index}.jsonl`;\n  const parts = origName.split('.');\n  const ext = parts.length > 1 ? '.' + parts.pop() : '';\n  const base = parts.join('.');\n\n  // 清洗后的文件名（保持后缀）\n  bin.fileName = sanitize(base, `data_${index}`) + (ext || '');\n\n  // 保险起见，补上 fileExtension（有些场景会用到）\n  if (!bin.fileExtension && ext) {\n    bin.fileExtension = ext.replace('.', '');\n  }\n\n  const key = `data_${index}`;\n  binaries[key] = bin;\n  binary_keys.push(key);\n}\n\nreturn [{\n  json: { binary_keys: binary_keys.join(',') },\n  binary: binaries\n}];"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -240,
+        1120
+      ],
+      "id": "8ed4064f-e491-4651-a287-12b30f60787c",
+      "name": "压缩处理-Google Vertex"
+    },
+    {
+      "parameters": {
+        "operation": "compress",
+        "binaryPropertyName": "={{ $json.binary_keys }}",
+        "fileName": "data"
+      },
+      "type": "n8n-nodes-base.compression",
+      "typeVersion": 1.1,
+      "position": [
+        -48,
+        1120
+      ],
+      "id": "db2a7370-c613-4417-aea7-2c64d706dee6",
+      "name": "压缩-Google Vertex"
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "n8n-nodes-base.splitInBatches",
+      "typeVersion": 3,
+      "position": [
+        -656,
+        -32
+      ],
+      "id": "2b059c36-cd71-4445-be7e-f10ea13ba6b2",
+      "name": "遍历数据-加工"
+    },
+    {
+      "parameters": {
+        "operation": "completion",
+        "completionTitle": "获取完成",
+        "completionMessage": "感谢您的使用！",
+        "limitWaitTime": true,
+        "resumeUnit": "minutes",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.form",
+      "typeVersion": 1,
+      "position": [
+        -448,
+        -144
+      ],
+      "id": "a96f475a-2a28-498f-9379-1d3456a577b3",
+      "name": "结束-加工",
+      "webhookId": "0c1edff4-a2ac-441e-af10-7a1cf9887c4a"
+    },
+    {
+      "parameters": {
+        "jsCode": "/**\n * n8n Code node\n * Mode: Run Once For All Items\n * Language: JavaScript\n * Source data node: 「获取数据集」\n * Name source node: 「需求输入」\n *\n * 需求：\n * 1) 生成两个数据集文件（训练集 + 验证集），验证集为总样本的 10%（若总数>0，至少 1 条）\n * 2) JSONL 每行采用 OpenAI Chat 样式的 messages 格式，必须包含 system 项目：\n *    {\n *      \"messages\": [\n *        { \"role\": \"system\",    \"content\": \"<系统提示词>\" },\n *        { \"role\": \"user\",      \"content\": \"<提示词>\" },\n *        { \"role\": \"assistant\", \"content\": \"<标准化正文>\" }\n *      ]\n *    }\n * 3) 文件名模式：<微调名称>-YYYY/MM/DD-<train|validation>.jsonl\n *\n * 源数据字段（来自「获取数据集」）：\n *   - 提示词\n *   - 标准化正文\n *\n * 系统提示词来源（来自「需求输入」），按以下键优先级读取，缺省为 \"You are a helpful assistant\"：\n *   - 系统\n *   - 系统提示词\n *   - system\n */\n\nconst SRC_NODE  = \"获取数据集\";\nconst NAME_NODE = \"需求输入\";\n\nconst srcItems  = $items(SRC_NODE, 0, 0);\nconst nameItems = $items(NAME_NODE, 0, 0);\n\n// 微调名称（用于组成文件名目录）\nconst fineTuneNameRaw = nameItems?.[0]?.json?.['微调名称'];\n\n// 系统提示词（用于 messages[0]）\nconst systemPrompt =\n  nameItems?.[0]?.json?.['系统'] ??\n  nameItems?.[0]?.json?.['系统提示词'] ??\n  nameItems?.[0]?.json?.['system'] ??\n  \"You are a helpful assistant\";\n\nconst MAX_CHARS = 100000;\nconst clip = (s) => {\n  if (typeof s !== 'string') s = s == null ? '' : String(s);\n  s = s.trim();\n  return s.length > MAX_CHARS ? s.slice(0, MAX_CHARS) : s;\n};\n\n// 清理文件名不合法字符（保留正斜杠用于目录分级）\nconst sanitizeBase = (s) => String(s ?? '')\n  .replace(/[\\\\:*?\"<>|\\r\\n]+/g, \"-\")\n  .replace(/\\s+/g, \" \")\n  .trim() || \"Gemini\";\n\nconst pad = (n) => String(n).padStart(2, \"0\");\nconst now = new Date();\nconst y  = now.getFullYear();\nconst mo = pad(now.getMonth() + 1);\nconst d  = pad(now.getDate());\n\n// 目录前缀：<name>-YYYY/MM/DD\nconst baseName = sanitizeBase(fineTuneNameRaw);\nconst fileStem = `${baseName}-${y}/${mo}/${d}`;\n\n// 目标文件名：在同一目录下输出训练/验证两个文件\nconst trainFileName = `${fileStem}-train.jsonl`;\nconst valFileName   = `${fileStem}-validation.jsonl`;\n\nconst allLines = [];\nlet skipped = 0;\n\nfor (const it of srcItems) {\n  const j = it.json || {};\n  const prompt = clip(j['提示词'] ?? '');\n  const answer = clip(j['标准化正文'] ?? '');\n  if (!prompt || !answer) { skipped++; continue; }\n\n  // —— 符合你要求的 OpenAI Chat messages 格式，包含 system 项目 ——\n  const record = {\n    messages: [\n      { role: \"system\",    content: systemPrompt },\n      { role: \"user\",      content: prompt },\n      { role: \"assistant\", content: answer }\n    ]\n  };\n\n  allLines.push(JSON.stringify(record));\n}\n\n// 打乱顺序（Fisher–Yates）\nconst shuffled = [...allLines];\nfor (let i = shuffled.length - 1; i > 0; i--) {\n  const j = Math.floor(Math.random() * (i + 1));\n  [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];\n}\n\n// 计算验证集数量（10%，若总数>0 至少取 1 条）\nlet valCount = 0;\nif (shuffled.length > 0) {\n  valCount = Math.max(1, Math.floor(shuffled.length * 0.10));\n}\nvalCount = Math.min(valCount, shuffled.length);\n\n// 拆分训练/验证\nconst valLines   = shuffled.slice(0, valCount);\nconst trainLines = shuffled.slice(valCount);\n\n// 生成 JSONL 字符串\nconst trainJsonl = trainLines.join('\\n');\nconst valJsonl   = valLines.join('\\n');\n\n// 统计信息\nconst total            = allLines.length;\nconst trainCount       = trainLines.length;\nconst validationCount  = valLines.length;\n\n// 返回两个输出项：训练集与验证集（各自含 binary 文件与统计信息）\n// 同时在 json 中带回 jsonl 便于调试/查看（如不需要可移除 jsonl 字段以减小体积）\nreturn [\n  {\n    json: {\n      role: 'train',\n      format: 'openai.chat.messages',\n      fileName: trainFileName,\n      total,\n      trainCount,\n      validationCount,\n      skipped,\n      jsonl: trainJsonl,\n      systemPrompt\n    },\n    binary: {\n      data: {\n        data: Buffer.from(trainJsonl, 'utf8').toString('base64'),\n        fileName: trainFileName, // 包含目录分级\n        mimeType: 'application/x-ndjson'\n      }\n    }\n  },\n  {\n    json: {\n      role: 'validation',\n      format: 'openai.chat.messages',\n      fileName: valFileName,\n      total,\n      trainCount,\n      validationCount,\n      skipped,\n      jsonl: valJsonl,\n      systemPrompt\n    },\n    binary: {\n      data: {\n        data: Buffer.from(valJsonl, 'utf8').toString('base64'),\n        fileName: valFileName, // 包含目录分级\n        mimeType: 'application/x-ndjson'\n      }\n    }\n  }\n];"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -432,
+        1328
+      ],
+      "id": "156268e2-8179-4c5c-b975-ca4e0b9dc869",
+      "name": "格式化数据集-Together"
+    },
+    {
+      "parameters": {
+        "jsCode": "let binaries = {}, binary_keys = [];\n\nconst sanitize = (name, fallback) => {\n  const n = String(name || fallback || 'file');\n  // 去掉路径分隔和不合法字符\n  return n\n    .replace(/[\\/\\\\]/g, '-')            // 目录分隔符 -> 连字符\n    .replace(/[:*?\"<>|]/g, '-')         // Windows 非法字符\n    .replace(/\\s+/g, ' ')               // 可选：多空格折叠\n    .trim();\n};\n\nfor (const [index, inputItem] of Object.entries($input.all())) {\n  const src = inputItem.binary.data;      // 原二进制\n  const bin = { ...src };                  // 浅拷贝，避免原地修改\n\n  // 取原始文件名与后缀\n  const origName = bin.fileName || `data_${index}.jsonl`;\n  const parts = origName.split('.');\n  const ext = parts.length > 1 ? '.' + parts.pop() : '';\n  const base = parts.join('.');\n\n  // 清洗后的文件名（保持后缀）\n  bin.fileName = sanitize(base, `data_${index}`) + (ext || '');\n\n  // 保险起见，补上 fileExtension（有些场景会用到）\n  if (!bin.fileExtension && ext) {\n    bin.fileExtension = ext.replace('.', '');\n  }\n\n  const key = `data_${index}`;\n  binaries[key] = bin;\n  binary_keys.push(key);\n}\n\nreturn [{\n  json: { binary_keys: binary_keys.join(',') },\n  binary: binaries\n}];"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -240,
+        1328
+      ],
+      "id": "ab4bda23-8aed-43c2-9ac4-f77518709d68",
+      "name": "压缩处理-Together"
+    },
+    {
+      "parameters": {
+        "operation": "compress",
+        "binaryPropertyName": "={{ $json.binary_keys }}",
+        "fileName": "data"
+      },
+      "type": "n8n-nodes-base.compression",
+      "typeVersion": 1.1,
+      "position": [
+        -48,
+        1328
+      ],
+      "id": "29cee7b2-4280-482a-bd7b-adabfbab26ce",
+      "name": "压缩-Together"
+    },
+    {
+      "parameters": {
+        "operation": "completion",
+        "respondWith": "returnBinary",
+        "completionTitle": "微调数据已经生成",
+        "completionMessage": "请前往谷歌云 Vertex 进行微调训练，感谢使用翔宇微调工具集！",
+        "limitWaitTime": true,
+        "resumeUnit": "minutes",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.form",
+      "typeVersion": 2.3,
+      "position": [
+        160,
+        1328
+      ],
+      "id": "9b7b4937-d935-4f49-8bfc-913fb1738933",
+      "name": "返回数据集-Together",
+      "webhookId": "de7ca07f-d8ea-47a1-89f2-06970a2292e0"
+    },
+    {
+      "parameters": {
+        "model": "grok-4-fast-non-reasoning",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatXAiGrok",
+      "typeVersion": 1,
+      "position": [
+        1392,
+        1200
+      ],
+      "id": "05ce31e4-65ae-4e58-9ab5-f40addca9620",
+      "name": "xAI Grok Chat Model"
+    },
+    {
+      "parameters": {
+        "numberInputs": 3,
+        "rules": {
+          "rule": [
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "id": "2586cdd5-3da0-433b-86c0-457b2bde4171",
+                    "leftValue": "={{ $('需求输入').item.json['模型平台'] }}",
+                    "rightValue": "OpenRouter",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "modelIndex": 2,
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "id": "27d413bc-5020-4385-9a1b-a72825d57b81",
+                    "leftValue": "={{ $('需求输入').item.json['模型平台'] }}",
+                    "rightValue": "Gemini",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "modelIndex": 3,
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "id": "dd76e94d-ce74-497a-95e3-57700d3e6095",
+                    "leftValue": "={{ $('需求输入').item.json['模型平台'] }}",
+                    "rightValue": "Gork",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            }
+          ]
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.modelSelector",
+      "typeVersion": 1,
+      "position": [
+        1184,
+        1008
+      ],
+      "id": "2f2077e8-fb5d-4b08-8f01-68faa9ac6e19",
+      "name": "Model Selector"
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+      "typeVersion": 1,
+      "position": [
+        1232,
+        1200
+      ],
+      "id": "8d3768e7-3ba6-44aa-aa97-61acfc08de58",
+      "name": "Google Gemini Chat Model"
+    },
+    {
+      "parameters": {
+        "model": "x-ai/grok-4-fast:free",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenRouter",
+      "typeVersion": 1,
+      "position": [
+        -336,
+        448
+      ],
+      "id": "38835dfc-6d5f-407f-bb15-2b686eac9c7e",
+      "name": "OpenRouter Chat Model2",
+      "credentials": {
+        "openRouterApi": {
+          "id": "dsnr9iLEw6u675bT",
+          "name": "OpenRouter account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "model": "grok-4-fast-non-reasoning",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatXAiGrok",
+      "typeVersion": 1,
+      "position": [
+        -16,
+        448
+      ],
+      "id": "a45c4699-14d3-4afa-8c6d-2e8a777d5216",
+      "name": "xAI Grok Chat Model1"
+    },
+    {
+      "parameters": {
+        "numberInputs": 3,
+        "rules": {
+          "rule": [
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "id": "2586cdd5-3da0-433b-86c0-457b2bde4171",
+                    "leftValue": "={{ $('需求输入').item.json['模型平台'] }}",
+                    "rightValue": "OpenRouter",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "modelIndex": 2,
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "id": "27d413bc-5020-4385-9a1b-a72825d57b81",
+                    "leftValue": "={{ $('需求输入').item.json['模型平台'] }}",
+                    "rightValue": "Gemini",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "modelIndex": 3,
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "id": "dd76e94d-ce74-497a-95e3-57700d3e6095",
+                    "leftValue": "={{ $('需求输入').item.json['模型平台'] }}",
+                    "rightValue": "Gork",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            }
+          ]
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.modelSelector",
+      "typeVersion": 1,
+      "position": [
+        -224,
+        256
+      ],
+      "id": "3f6e2349-c458-46de-8705-740a6a2a23a7",
+      "name": "Model Selector1"
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+      "typeVersion": 1,
+      "position": [
+        -160,
+        448
+      ],
+      "id": "49cd7335-ac04-41a7-83c9-2ea65fba16b7",
+      "name": "Google Gemini Chat Model1",
+      "credentials": {
+        "googlePalmApi": {
+          "id": "3N5wdjCgo3NS6T9S",
+          "name": "Google Gemini(PaLM) Api account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=# 角色：专业内容编辑与标准化处理专家\n\n你是一位专业的内容编辑与标准化处理专家，具备深厚的语言文字功底和敏锐的内容洞察力。你能够准确识别文章性质，区分内容类与营销类文章。你具备卓越的校对能力，能够精准修正错别字、标点符号、语法问题，确保文字准确性。你擅长净化文本内容，清除营销推广语言、引导性操作指令、社交媒体标识等无关元素，提炼文章精华。你能够自然流畅地进行作者信息替换，按照标准化规范进行格式化处理，确保输出内容逻辑清晰、结构完整。请使用你单次回答的算力上限和 token 上限，思考最深入，花费最多时间和最大算力以进行最深度的思考。\n\n## 核心任务：\n\n你的任务是接收一篇完整的文章和一个指定的作者名，按照内容分析分类、作者信息替换、文本校对修正、内容净化处理、格式化输出的完整工作流程，对文章进行标准化处理，包括替换作者、修正错别字、不正确的标点符号以及删除营销和无关内容，最后按照指定的标签格式输出处理结果，整个过程中应最大程度保持文章原有内容和表达方式不变，仅针对明确存在问题的部分进行修正，避免过度编辑或改写。\n\n## 信息输入：\n- **待处理文章内容**:\n  ```\n  {{ $json.content }}\n  ```\n\n- **原始作者姓名**: {{ $('需求输入').item.json['微调名称'] }}\n- **目标替换作者**: 翔宇\n- **文章类型分类标准**: `内容类`、`营销类`\n\n## 工作流程：\n\n1. **阅读与分析**: 首先，完整阅读并理解\"信息输入\"中提供的\"完整文章\"内容，把握文章的主题、结构和语言风格。\n\n2. **内容分类**: 根据文章的语言风格、内容、目的和结构，以及\"信息输入\"中提供的\"文章分类划分\"，判断其属于 `内容类` 还是 `营销类`。\n\n   - **内容类**: 内容客观，以信息分享、知识普及、故事叙述、观点表达、经验分享等为主要目的，不含明显商业推广意图。\n   - **营销类**: 带有明显的商业目的，意图推广产品、服务或品牌，包含引导性消费的语言，或以销售转化为最终目标。\n\n3. **文本标准化**:\n   **a. 替换作者**:\n\n   - 文章中凡出现类似\"某某认为/表示/说/指出/强调/建议/分析/总结\"等涉及作者陈述的语句，一律将其中的作者姓名替换为信息输入中指定的作者\"翔宇\"。\n     **b. 校对与修正**:\n   - 逐字逐句检查全文，修正所有发现的错别字、错词和不正确的标点符号。\n   - 统一标点符号使用规范（如统一使用中文标点符号）。\n   - 修正语法错误和表达不当之处。\n   - 在修正过程中，务必保持文章原意和核心内容不变。\n   - 识别并删除多余的字词，纠正因输入错误或OCR识别错误导致的字词问题。\n   - 处理因复制粘贴或格式转换产生的多余空格、换行符等。\n   - 确保各级#标题中不使用加粗符号**，保持标题格式简洁统一。\n   - 确保输出的 Markdown 格式规范美观，段落清晰易读，包括合理使用标题层级、保持适当空行间距、统一列表格式、正确使用代码块和引用块、整齐对齐表格、标准化链接和图片引用等格式要求。\n\n   **c. 内容净化**:\n   深度清理与文章核心内容无关的元素，包括但不限于：\n\n   - **营销推广内容**: 删除任何涉及商品推广、服务推销、品牌宣传的描述、图片或链接。\n   - **引导性操作语**: 移除引导性操作语，例如\"点击👇下方小卡片关注\"、\"点击收听本文音频\"、\"你的「赞」+「在看」，我看得见\"、\"欢迎关注\"、\"请点赞\"、\"转发分享\"、\"订阅我们\"等。\n   - **作者标识**: 移除显性的文章作者标识、个人介绍、联系方式等。\n   - **附加信息**: 删除文章末尾的来源信息、版权声明、作者介绍、相关文章推荐、参考资料列表、免责声明等。\n   - **社交媒体元素**: 删除表情符号、话题标签（#）、@提及等社交媒体特有元素。\n   - 确保最终输出只包含纯粹的文章标题和正文内容。\n\n4. **格式化输出**: 将经过上述步骤处理后的最终文本，整理成指定的输出规范格式。\n\n## 输出规范\n\n- 请严格按照以下 XML 风格的标签格式组织最终输出，不要包含任何额外的解释性文字。\n- `<category>` 标签内应只包含根据\"信息输入\"中\"文章分类划分\"所判断出的分类名称。\n- `<standardized_complete_article>` 标签内应包含经过所有标准化处理后的完整文章正文，并使用 Markdown 格式进行排版。\n\n## 输出示例:\n\n<category>[文章分类]</category>\n<standardized_complete_article>\n\n# [文章标题]\n\n[文章正文]\n</standardized_complete_article>",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 2.2,
+      "position": [
+        944,
+        784
+      ],
+      "id": "ebb5ae95-ce99-452b-ab06-24c5528baf8c",
+      "name": "文章标准化处理"
+    },
+    {
+      "parameters": {
+        "amount": 1
+      },
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "position": [
+        1264,
+        784
+      ],
+      "id": "1cb907ce-0d05-47ff-a6e2-ae51cd239aec",
+      "name": "等待",
+      "webhookId": "06dc3f0b-29ca-47f2-995b-7eb82582f848"
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=# 角色:提示词逆向工程大师\n\n你是一个专业的提示词（Prompt）逆向工程师。在高质量的AI内容生成工作中，优秀的提示词是关键。然而，我们常常只看到最终生成的内容，却不了解其背后的提示词。本任务的目标就是通过对一篇已由AI生成的文章进行\"逆向工程\"，严格按照输出规范中的XML模板进行结构化构建，推导并重构出一个高质量的、结构化的、最有可能生成该文章的原始提示词。请使用你单次回答的算力上限和 token 上限，思考最深入，花费最多时间和最大算力以进行最深度的思考。\n\n## 核心任务\n根据用户提供的“完整文章”和特定要求，逆向分析并重构出一个专业、结构化、高效的提示词。最终输出的提示词应当能够指导AI模型生成与“完整文章”在主题、结构、风格和核心信息上高度一致的内容，并严格按照输出规范给出的XML模板进行逆向提示词构建。\n\n## 信息输入\n- **完整文章**: \n`{{ $json[\"output\"].match(/<standardized_complete_article>([\\s\\S]*?)<\\/standardized_complete_article>/)[1].trim() }}`\n- **指定语言风格**: `{{ $('需求输入').item.json['微调名称'] }}`\n- **指定输出格式**: `markdown`\n- **指定字数**: 根据“完整文章”计算出的实际字数。\n\n\n## 工作流程\n1. **文章深度解析**：全面分析\"完整文章\"，重点把握其核心主题、逻辑结构、关键论点及论证方式，同时关注文章的语言风格和表达特点。\n2. **素材提炼与结构化**：基于文章分析结果，系统性地提取核心内容，将其转化为结构化的`文章素材`。素材提炼应采用类似新闻采集的形式，遵循以下原则：\n   - 以文章主题作为检索关键词，从新闻数据库中检索相关的新闻报道、事件背景、数据统计、专家观点、案例分析等核心信息，并将检索结果整理为一段连贯的文字描述\n   - 素材以客观事实为主，不掺杂主观观点\n   - 保持信息的准确性和完整性，避免遗漏重要细节\n   - 字数在 1000 字以内。\n3. **提示词优化构建**：整合分析得出的`主题`、提炼的`文章素材`，结合\"信息输入\"中的`指定语言风格`、`指定输出格式`和`指定字数`等参数，按照\"输出规范\"模板，构建一个结构完整、要素齐全、表述精准的提示词。提示词应确保能够指导AI生成与原文在内容、风格和结构上高度一致的文章。\n\n## 输出规范\n\n- 请将最终逆向生成的提示词严格按照以下XML格式进行包裹，不要添加任何额外的解释。\n- 这个输出就是你逆向分析出的、最有可能生成原文的提示词。\n\n```\n<prompt>\n# 角色：{{ $('需求输入').item.json['微调名称'] }}风格文章撰写大师\n你是一位世界级资深的文章撰写大师，深谙文字表达的精髓与技巧，尤其擅长创作具有{{ $('需求输入').item.json['微调名称'] }}独特风格特色的高质量文章。你拥有深厚的文字功底和敏锐的内容洞察力，能够准确把握不同主题的核心要点，并以{{ $('需求输入').item.json['微调名称'] }}的方式进行表达。\n## 核心任务\n现在请根据以下具体要求，运用你的专业能力进行深度创作：\n1. 请根据我提供的\"文章素材\"，撰写一篇约[实际输出逆向计算的\"指定字数\"]字的文章。\n2. 文章应紧密围绕\"[实际输出逆向分析出的文章主题]\"这一核心主题进行全面阐述。\n3. 请采用\"{{ $('需求输入').item.json['微调名称'] }}\"的独特语言风格和表达方式进行创作，确保文章具有鲜明的个人特色和专业水准。\n4. 请直接输出完整的带标题的简体中文文章，无需在文章前后添加任何解释性文字、说明性内容或格式标记。\n## 文章素材：\n[此处填写从原文中提炼出的新闻事实信息。请确保内容客观、不包含个人观点，并详尽地列出核心要点、数据等。以纯文本格式输出素材]\n## 文章输出格式：\n请以markdown格式输出文章，包含适当的标题层级、段落结构和格式化元素，确保文章具有良好的可读性和专业的视觉呈现效果。\n</prompt>\n```",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 2.2,
+      "position": [
+        1440,
+        784
+      ],
+      "id": "766dfe0a-d09d-4ecd-967b-28ca4dedcf36",
+      "name": "文章提示词生成"
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=# 角色：专业内容编辑与标准化处理专家\n\n你是一位专业的内容编辑与标准化处理专家，具备深厚的语言文字功底和敏锐的内容洞察力。你能够准确识别文章性质，区分内容类与营销类文章。你具备卓越的校对能力，能够精准修正错别字、标点符号、语法问题，确保文字准确性。你擅长净化文本内容，清除营销推广语言、引导性操作指令、社交媒体标识等无关元素，提炼文章精华。你能够自然流畅地进行作者信息替换，按照标准化规范进行格式化处理，确保输出内容逻辑清晰、结构完整。请使用你单次回答的算力上限和 token 上限，思考最深入，花费最多时间和最大算力以进行最深度的思考。\n\n## 核心任务：\n\n你的任务是接收一篇完整的文章和一个指定的作者名，按照内容分析分类、作者信息替换、文本校对修正、内容净化处理、格式化输出的完整工作流程，对文章进行标准化处理，包括替换作者、修正错别字、不正确的标点符号以及删除营销和无关内容，最后按照指定的标签格式输出处理结果，整个过程中应最大程度保持文章原有内容和表达方式不变，仅针对明确存在问题的部分进行修正，避免过度编辑或改写。\n\n## 信息输入：\n- **待处理文章内容**:\n  ```\n{{ $json['原版正文'] }}\n  ```\n\n- **原始作者姓名**: {{ $('需求输入').item.json['微调名称'] }}\n- **目标替换作者**: 翔宇\n- **文章类型分类标准**: `内容类`、`营销类`\n\n## 工作流程：\n\n1. **阅读与分析**: 首先，完整阅读并理解\"信息输入\"中提供的\"完整文章\"内容，把握文章的主题、结构和语言风格。\n\n2. **内容分类**: 根据文章的语言风格、内容、目的和结构，以及\"信息输入\"中提供的\"文章分类划分\"，判断其属于 `内容类` 还是 `营销类`。\n\n   - **内容类**: 内容客观，以信息分享、知识普及、故事叙述、观点表达、经验分享等为主要目的，不含明显商业推广意图。\n   - **营销类**: 带有明显的商业目的，意图推广产品、服务或品牌，包含引导性消费的语言，或以销售转化为最终目标。\n\n3. **文本标准化**:\n   **a. 替换作者**:\n\n   - 文章中凡出现类似\"某某认为/表示/说/指出/强调/建议/分析/总结\"等涉及作者陈述的语句，一律将其中的作者姓名替换为信息输入中指定的作者\"翔宇\"。\n     **b. 校对与修正**:\n   - 逐字逐句检查全文，修正所有发现的错别字、错词和不正确的标点符号。\n   - 统一标点符号使用规范（如统一使用中文标点符号）。\n   - 修正语法错误和表达不当之处。\n   - 在修正过程中，务必保持文章原意和核心内容不变。\n   - 识别并删除多余的字词，纠正因输入错误或OCR识别错误导致的字词问题。\n   - 处理因复制粘贴或格式转换产生的多余空格、换行符等。\n   - 确保各级#标题中不使用加粗符号**，保持标题格式简洁统一。\n   - 确保输出的 Markdown 格式规范美观，段落清晰易读，包括合理使用标题层级、保持适当空行间距、统一列表格式、正确使用代码块和引用块、整齐对齐表格、标准化链接和图片引用等格式要求。\n\n   **c. 内容净化**:\n   深度清理与文章核心内容无关的元素，包括但不限于：\n\n   - **营销推广内容**: 删除任何涉及商品推广、服务推销、品牌宣传的描述、图片或链接。\n   - **引导性操作语**: 移除引导性操作语，例如\"点击👇下方小卡片关注\"、\"点击收听本文音频\"、\"你的「赞」+「在看」，我看得见\"、\"欢迎关注\"、\"请点赞\"、\"转发分享\"、\"订阅我们\"等。\n   - **作者标识**: 移除显性的文章作者标识、个人介绍、联系方式等。\n   - **附加信息**: 删除文章末尾的来源信息、版权声明、作者介绍、相关文章推荐、参考资料列表、免责声明等。\n   - **社交媒体元素**: 删除表情符号、话题标签（#）、@提及等社交媒体特有元素。\n   - 确保最终输出只包含纯粹的文章标题和正文内容。\n\n4. **格式化输出**: 将经过上述步骤处理后的最终文本，整理成指定的输出规范格式。\n\n## 输出规范\n\n- 请严格按照以下 XML 风格的标签格式组织最终输出，不要包含任何额外的解释性文字。\n- `<category>` 标签内应只包含根据\"信息输入\"中\"文章分类划分\"所判断出的分类名称。\n- `<standardized_complete_article>` 标签内应包含经过所有标准化处理后的完整文章正文，并使用 Markdown 格式进行排版。\n\n## 输出示例:\n\n<category>[文章分类]</category>\n<standardized_complete_article>\n\n# [文章标题]\n\n[文章正文]\n</standardized_complete_article>",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 2.2,
+      "position": [
+        -448,
+        48
+      ],
+      "id": "7dc82928-f662-4b5d-940c-42cbae9968b8",
+      "name": "文章标准化处理-加工"
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=# 角色:提示词逆向工程大师\n\n你是一个专业的提示词（Prompt）逆向工程师。在高质量的AI内容生成工作中，优秀的提示词是关键。然而，我们常常只看到最终生成的内容，却不了解其背后的提示词。本任务的目标就是通过对一篇已由AI生成的文章进行\"逆向工程\"，严格按照输出规范中的XML模板进行结构化构建，推导并重构出一个高质量的、结构化的、最有可能生成该文章的原始提示词。请使用你单次回答的算力上限和 token 上限，思考最深入，花费最多时间和最大算力以进行最深度的思考。\n\n## 核心任务\n根据用户提供的“完整文章”和特定要求，逆向分析并重构出一个专业、结构化、高效的提示词。最终输出的提示词应当能够指导AI模型生成与“完整文章”在主题、结构、风格和核心信息上高度一致的内容，并严格按照输出规范给出的XML模板进行逆向提示词构建。\n\n## 信息输入\n- **完整文章**: \n`{{ $json[\"output\"].match(/<standardized_complete_article>([\\s\\S]*?)<\\/standardized_complete_article>/)[1].trim() }}`\n- **指定语言风格**: `{{ $('需求输入').item.json['微调名称'] }}`\n- **指定输出格式**: `markdown`\n- **指定字数**: 根据“完整文章”计算出的实际字数。\n\n\n## 工作流程\n1. **文章深度解析**：全面分析\"完整文章\"，重点把握其核心主题、逻辑结构、关键论点及论证方式，同时关注文章的语言风格和表达特点。\n2. **素材提炼与结构化**：基于文章分析结果，系统性地提取核心内容，将其转化为结构化的`文章素材`。素材提炼应采用类似新闻采集的形式，遵循以下原则：\n   - 以文章主题作为检索关键词，从新闻数据库中检索相关的新闻报道、事件背景、数据统计、专家观点、案例分析等核心信息，并将检索结果整理为一段连贯的文字描述\n   - 素材以客观事实为主，不掺杂主观观点\n   - 保持信息的准确性和完整性，避免遗漏重要细节\n   - 字数在 1000 字以内。\n3. **提示词优化构建**：整合分析得出的`主题`、提炼的`文章素材`，结合\"信息输入\"中的`指定语言风格`、`指定输出格式`和`指定字数`等参数，按照\"输出规范\"模板，构建一个结构完整、要素齐全、表述精准的提示词。提示词应确保能够指导AI生成与原文在内容、风格和结构上高度一致的文章。\n\n## 输出规范\n\n- 请将最终逆向生成的提示词严格按照以下XML格式进行包裹，不要添加任何额外的解释。\n- 这个输出就是你逆向分析出的、最有可能生成原文的提示词。\n\n```\n<prompt>\n# 角色：{{ $('需求输入').item.json['微调名称'] }}风格文章撰写大师\n你是一位世界级资深的文章撰写大师，深谙文字表达的精髓与技巧，尤其擅长创作具有{{ $('需求输入').item.json['微调名称'] }}独特风格特色的高质量文章。你拥有深厚的文字功底和敏锐的内容洞察力，能够准确把握不同主题的核心要点，并以{{ $('需求输入').item.json['微调名称'] }}的方式进行表达。\n## 核心任务\n现在请根据以下具体要求，运用你的专业能力进行深度创作：\n1. 请根据我提供的\"文章素材\"，撰写一篇约[实际输出逆向计算的\"指定字数\"]字的简体中文文章。\n2. 文章应紧密围绕\"[实际输出逆向分析出的文章主题]\"这一核心主题进行全面阐述。\n3. 请采用\"{{ $('需求输入').item.json['微调名称'] }}\"的独特语言风格和表达方式进行创作，确保文章具有鲜明的个人特色和专业水准。\n4. 请直接输出完整的带标题的简体中文文章，无需在文章前后添加任何解释性文字、说明性内容或格式标记。\n## 文章素材：\n[此处填写从原文中提炼出的新闻事实信息。请确保内容客观、不包含个人观点，并详尽地列出核心要点、数据等。以纯文本格式输出素材]\n## 文章输出格式：\n[请以markdown格式输出文章，包含适当的标题层级、段落结构和格式化元素，确保文章具有良好的可读性和专业的视觉呈现效果。]\n</prompt>\n```",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 2.2,
+      "position": [
+        48,
+        48
+      ],
+      "id": "b9047d11-344f-4d35-a32a-3ff87e73abf9",
+      "name": "文章提示词生成-加工"
+    },
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "position": [
+        -128,
+        48
+      ],
+      "id": "408af51b-1555-42e3-8468-dcc95233693f",
+      "name": "等待-加工",
+      "webhookId": "90732964-2de4-46da-859f-2796a9f879bc"
+    },
+    {
+      "parameters": {
+        "authentication": "nocoDbApiToken",
+        "operation": "create",
+        "workspaceId": "wmpdb3r5",
+        "projectId": "puql4h81qa7y3nz",
+        "table": "mj2lr9sk31ivfrr",
+        "fieldsUi": {
+          "fieldValues": [
+            {
+              "fieldName": "标题",
+              "fieldValue": "={{ $('获取详情-纯文本').item.json.title }}"
+            },
+            {
+              "fieldName": "原版正文",
+              "fieldValue": "={{ $('获取详情-纯文本').item.json.content}}"
+            },
+            {
+              "fieldName": "网址",
+              "fieldValue": "={{ $('循环文章').item.json.url }}"
+            },
+            {
+              "fieldName": "发布时间",
+              "fieldValue": "={{ $('获取详情-纯文本').item.json.create_time }}"
+            },
+            {
+              "fieldName": "标准化正文",
+              "fieldValue": "={{ \n  (\n    ($node[\"文章标准化处理\"].json.output || \"\")\n      .match(/<standardized_complete_article>([\\s\\S]*?)<\\/standardized_complete_article>/)?.[1]?.trim()\n  ) || \"\"\n}}"
+            },
+            {
+              "fieldName": "类别",
+              "fieldValue": "={{ \n  (\n    ($node[\"文章标准化处理\"].json.output || \"\")\n      .match(/<category>([\\s\\S]*?)<\\/category>/)?.[1]?.trim()\n  ) || \"\"\n}}"
+            },
+            {
+              "fieldName": "提示词",
+              "fieldValue": "={{ \n  (\n    ($node[\"文章提示词生成\"].json.output || \"\")\n      .match(/<prompt>([\\s\\S]*?)<\\/prompt>/)?.[1]?.trim()\n  ) || \"\"\n}}"
+            },
+            {
+              "fieldName": "微调名称",
+              "fieldValue": "={{ $('需求输入').item.json['微调名称'] }}"
+            }
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.nocoDb",
+      "typeVersion": 3,
+      "position": [
+        1776,
+        832
+      ],
+      "id": "81bf996a-4c38-47a3-9bc5-a55878d8e1bb",
+      "name": "保存"
+    },
+    {
+      "parameters": {
+        "authentication": "nocoDbApiToken",
+        "operation": "update",
+        "workspaceId": "wmpdb3r5",
+        "projectId": "puql4h81qa7y3nz",
+        "table": "mj2lr9sk31ivfrr",
+        "fieldsUi": {
+          "fieldValues": [
+            {
+              "fieldName": "标准化正文",
+              "fieldValue": "={{ \n  (\n    ($node[\"文章标准化处理-加工\"].json.output || \"\")\n      .match(/<standardized_complete_article>([\\s\\S]*?)<\\/standardized_complete_article>/)?.[1]?.trim()\n  ) || \"\"\n}}"
+            },
+            {
+              "fieldName": "类别",
+              "fieldValue": "={{ \n  (\n    ($node[\"文章标准化处理-加工\"].json.output || \"\")\n      .match(/<category>([\\s\\S]*?)<\\/category>/)?.[1]?.trim()\n  ) || \"\"\n}}"
+            },
+            {
+              "fieldName": "提示词",
+              "fieldValue": "={{ \n  (\n    ($node[\"文章提示词生成-加工\"].json.output || \"\")\n      .match(/<prompt>([\\s\\S]*?)<\\/prompt>/)?.[1]?.trim()\n  ) || \"\"\n}}"
+            },
+            {
+              "fieldName": "微调名称",
+              "fieldValue": "={{ $('需求输入').item.json['微调名称'] }}"
+            },
+            {
+              "fieldName": "Id",
+              "fieldValue": "={{ $('遍历数据-加工').item.json.Id }}"
+            }
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.nocoDb",
+      "typeVersion": 3,
+      "position": [
+        368,
+        112
+      ],
+      "id": "88a82277-0c57-4344-a2a7-caba8c855f8d",
+      "name": "保存-加工"
+    }
+  ],
+  "pinData": {},
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "shared": [
+    {
+      "updatedAt": "2025-10-19T15:41:16.735Z",
+      "createdAt": "2025-10-19T15:41:16.735Z",
+      "role": "workflow:owner",
+      "workflowId": "HAsuwHsIc6MbJwuz",
+      "projectId": "daqvnEo6t4UA2J5k"
+    }
+  ],
+  "staticData": null,
+  "tags": [],
+  "triggerCount": 0,
+  "updatedAt": "2025-10-19T15:41:59.000Z",
+  "versionId": "4fb16b85-790a-4c9b-a2ec-5e61285ccba7"
+}
